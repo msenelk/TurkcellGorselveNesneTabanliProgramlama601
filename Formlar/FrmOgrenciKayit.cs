@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TurkcellGorselveNesneTabanliProgramlama601
+namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
-    public partial class Form1 : Form
+    public partial class FrmOgrenciKayit : Form
     {
-        public Form1()
+        public FrmOgrenciKayit()
         {
             InitializeComponent();
         }
