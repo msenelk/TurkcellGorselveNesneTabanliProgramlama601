@@ -20,6 +20,8 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         }
         // Data Source=MSENELK\SQLEXPRESS;Initial Catalog=OgrenciSinav;Integrated Security=True;Trust Server Certificate=True
         SqlConnection baglanti = new SqlConnection(@"Data Source=MSENELK\SQLEXPRESS;Initial Catalog=OgrenciSinav;Integrated Security=True");
+        OgrenciSinavEntities db = new OgrenciSinavEntities();
+
         private void FrmOgrenciKayit_Load(object sender, EventArgs e)
         {
             baglanti.Open();
@@ -32,9 +34,20 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             comboBox1.DataSource = ds;
         }
 
+       
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-           
+           TblOgrenci t = new TblOgrenci();
+            t.OgrAd = txtOgrAd.Text;
+            t.OgrSoyad = txtOgrSoyad.Text;
+            t.OgrNumara = txtOgrNumara.Text;
+            t.OgrEposta = txtOgrMail.Text;
+            t.OgrResim= txtOgrResim.Text;
+            t.OgrSifre= txtOgrSifre.Text;
+            t.OgrBolum =int.Parse(comboBox1.SelectedValue.ToString());
+            db.TblOgrenci.Add(t);
+            db.SaveChanges();
+            MessageBox.Show("Öğrenci Bilgileri Sisteme Başarılı Bir Şekilde Kaydedildi","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

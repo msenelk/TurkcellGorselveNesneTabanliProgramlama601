@@ -30,45 +30,45 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOgrSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtOgrResim = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtOgrMail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtOgrSifreTekrar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtOgrSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtOgrAd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtOgrNumara = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.txtOgrNumara);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtOgrAd);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtOgrSoyad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtOgrResim);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtOgrMail);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txtOgrSifreTekrar);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtOgrSifre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnKaydet);
             this.groupBox1.Location = new System.Drawing.Point(31, 32);
@@ -89,14 +89,14 @@
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // textBox3
+            // txtOgrSifre
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(117, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 24);
-            this.textBox3.TabIndex = 4;
+            this.txtOgrSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrSifre.ForeColor = System.Drawing.Color.White;
+            this.txtOgrSifre.Location = new System.Drawing.Point(117, 145);
+            this.txtOgrSifre.Name = "txtOgrSifre";
+            this.txtOgrSifre.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrSifre.TabIndex = 4;
             // 
             // label3
             // 
@@ -118,14 +118,14 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Bölüm:";
             // 
-            // textBox6
+            // txtOgrResim
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(117, 235);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(193, 24);
-            this.textBox6.TabIndex = 7;
+            this.txtOgrResim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrResim.ForeColor = System.Drawing.Color.White;
+            this.txtOgrResim.Location = new System.Drawing.Point(117, 235);
+            this.txtOgrResim.Name = "txtOgrResim";
+            this.txtOgrResim.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrResim.TabIndex = 7;
             // 
             // label6
             // 
@@ -137,14 +137,14 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Resim:";
             // 
-            // textBox7
+            // txtOgrMail
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(117, 205);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(193, 24);
-            this.textBox7.TabIndex = 6;
+            this.txtOgrMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrMail.ForeColor = System.Drawing.Color.White;
+            this.txtOgrMail.Location = new System.Drawing.Point(117, 205);
+            this.txtOgrMail.Name = "txtOgrMail";
+            this.txtOgrMail.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrMail.TabIndex = 6;
             // 
             // label7
             // 
@@ -156,14 +156,14 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Mail:";
             // 
-            // textBox8
+            // txtOgrSifreTekrar
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(117, 175);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(193, 24);
-            this.textBox8.TabIndex = 5;
+            this.txtOgrSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrSifreTekrar.ForeColor = System.Drawing.Color.White;
+            this.txtOgrSifreTekrar.Location = new System.Drawing.Point(117, 175);
+            this.txtOgrSifreTekrar.Name = "txtOgrSifreTekrar";
+            this.txtOgrSifreTekrar.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrSifreTekrar.TabIndex = 5;
             // 
             // label8
             // 
@@ -195,23 +195,14 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Numara:";
             // 
-            // textBox1
+            // txtOgrSoyad
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(117, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 24);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(117, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 24);
-            this.textBox2.TabIndex = 2;
+            this.txtOgrSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrSoyad.ForeColor = System.Drawing.Color.White;
+            this.txtOgrSoyad.Location = new System.Drawing.Point(117, 85);
+            this.txtOgrSoyad.Name = "txtOgrSoyad";
+            this.txtOgrSoyad.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrSoyad.TabIndex = 2;
             // 
             // label2
             // 
@@ -223,14 +214,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Soyadı:";
             // 
-            // textBox5
+            // txtOgrAd
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(117, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 24);
-            this.textBox5.TabIndex = 1;
+            this.txtOgrAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrAd.ForeColor = System.Drawing.Color.White;
+            this.txtOgrAd.Location = new System.Drawing.Point(117, 55);
+            this.txtOgrAd.Name = "txtOgrAd";
+            this.txtOgrAd.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrAd.TabIndex = 1;
             // 
             // label9
             // 
@@ -251,6 +242,17 @@
             this.label4.Size = new System.Drawing.Size(144, 18);
             this.label4.TabIndex = 24;
             this.label4.Text = "Öğrenci Kayıt Formu";
+            // 
+            // txtOgrNumara
+            // 
+            this.txtOgrNumara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrNumara.ForeColor = System.Drawing.Color.White;
+            this.txtOgrNumara.Location = new System.Drawing.Point(117, 115);
+            this.txtOgrNumara.Mask = "00000";
+            this.txtOgrNumara.Name = "txtOgrNumara";
+            this.txtOgrNumara.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrNumara.TabIndex = 3;
+            this.txtOgrNumara.ValidatingType = typeof(int);
             // 
             // FrmOgrenciKayit
             // 
@@ -278,20 +280,20 @@
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOgrResim;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtOgrMail;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtOgrSifreTekrar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOgrSifre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtOgrAd;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtOgrSoyad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox txtOgrNumara;
     }
 }
