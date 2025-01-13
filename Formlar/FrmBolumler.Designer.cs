@@ -57,7 +57,6 @@
             this.txtBolumAdi.Name = "txtBolumAdi";
             this.txtBolumAdi.Size = new System.Drawing.Size(194, 24);
             this.txtBolumAdi.TabIndex = 1;
-            this.txtBolumAdi.TextChanged += new System.EventHandler(this.txtBolumAdi_TextChanged);
             // 
             // btnKaydet
             // 
@@ -72,6 +71,7 @@
             this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // groupBox1
             // 
