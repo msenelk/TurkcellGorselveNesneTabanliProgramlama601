@@ -16,5 +16,17 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             InitializeComponent();
         }
+
+        private void txtBolumAdi_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBolumAdi.Text=="")
+            {
+                errorProvider1.SetError(txtBolumAdi, "Bölüm adı boş geçilemez");
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Yapıldı.");
+            }
+        }
     }
 }
