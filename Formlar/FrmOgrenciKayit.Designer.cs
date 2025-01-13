@@ -266,6 +266,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmOgrenciKayit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOgrenciKayit";
             this.Load += new System.EventHandler(this.FrmOgrenciKayit_Load);
             this.groupBox1.ResumeLayout(false);

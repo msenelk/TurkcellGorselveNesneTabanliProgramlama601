@@ -37,17 +37,28 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
        
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-           TblOgrenci t = new TblOgrenci();
-            t.OgrAd = txtOgrAd.Text;
-            t.OgrSoyad = txtOgrSoyad.Text;
-            t.OgrNumara = txtOgrNumara.Text;
-            t.OgrEposta = txtOgrMail.Text;
-            t.OgrResim= txtOgrResim.Text;
-            t.OgrSifre= txtOgrSifre.Text;
-            t.OgrBolum =int.Parse(comboBox1.SelectedValue.ToString());
-            db.TblOgrenci.Add(t);
-            db.SaveChanges();
-            MessageBox.Show("Öğrenci Bilgileri Sisteme Başarılı Bir Şekilde Kaydedildi","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(txtOgrSifre.Text == txtOgrSifreTekrar.Text)
+            {
+                TblOgrenci t = new TblOgrenci();
+                t.OgrAd = txtOgrAd.Text;
+                t.OgrSoyad = txtOgrSoyad.Text;
+                t.OgrNumara = txtOgrNumara.Text;
+                t.OgrEposta = txtOgrMail.Text;
+                t.OgrResim = txtOgrResim.Text;
+                t.OgrSifre = txtOgrSifre.Text;
+                t.OgrBolum = int.Parse(comboBox1.SelectedValue.ToString());
+                db.TblOgrenci.Add(t);
+                db.SaveChanges();
+                MessageBox.Show("Öğrenci Bilgileri Sisteme Başarılı Bir Şekilde Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Şifreleri Birbiriyle Aynı Olacak Şekilde Yeniden Girin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtOgrSifre.Clear(); // Kullanıcının girdiği veriyi siliyoruz
+                txtOgrSifreTekrar.Clear();
+                txtOgrSifre.Focus(); // Şifreyi tekrar yazması için focuslanıyoruz..
+            }
+           
         }
     }
 }
