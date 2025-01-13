@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurkcellGorselveNesneTabanliProgramlama601.Entity;
 
 namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
@@ -16,7 +10,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             InitializeComponent();
         }
-
+        OgrenciSinavEntities db = new OgrenciSinavEntities();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             if (txtBolumAdi.Text == "")
@@ -25,7 +19,12 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             }
             else
             {
-                MessageBox.Show("Kayıt Yapıldı.");
+                TblBolum t = new TblBolum();
+                t.BolumAd = txtBolumAdi.Text;
+                db.TblBolum.Add(t);
+                db.SaveChanges();
+                MessageBox.Show("Bölüm Ekleme İşlemi Başarılı Bir Şekilde Gerçekleştirildi.","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                txtBolumAdi.Clear();
             }
         }
     }
