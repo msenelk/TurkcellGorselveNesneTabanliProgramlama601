@@ -106,6 +106,12 @@
     <Compile Include="Formlar\FrmBolumListesi.Designer.cs">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmOgrenci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmOgrenci.Designer.cs">
+      <DependentUpon>FrmOgrenci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmOgrenciKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmBolumListesi.resx">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmOgrenci.resx">
+      <DependentUpon>FrmOgrenci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmOgrenciKayit.resx">
       <DependentUpon>FrmOgrenciKayit.cs</DependentUpon>
