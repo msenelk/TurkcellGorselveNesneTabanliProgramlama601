@@ -51,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +108,7 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "...";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnGuncelle
             // 
@@ -118,6 +120,7 @@
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // label4
             // 
@@ -309,6 +312,10 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -356,5 +363,6 @@
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnListele;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

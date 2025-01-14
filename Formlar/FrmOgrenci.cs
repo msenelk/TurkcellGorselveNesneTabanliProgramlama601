@@ -92,5 +92,28 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             MessageBox.Show("Öğrenci Başarılı Bir Şekilde Sistemden Silindi, Silinen Öğrenciler Pasif Öğrenciler Listesi Üzerinden Erişim Sağlayabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             listele();
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var x = db.TblOgrenci.Find(id);
+            x.OgrAd = txtAd.Text;
+            x.OgrSoyad = txtSoyad.Text;
+            x.OgrNumara = txtNumara.Text;
+            x.OgrEposta = txtMail.Text;
+            x.OgrResim = txtResim.Text;
+            x.OgrSifre=txtSifre.Text;
+            x.OgrBolum = int.Parse(cmbBolum.SelectedValue.ToString());
+            db.SaveChanges();
+            db.SaveChanges();
+            MessageBox.Show("Öğrenci Başarılı Bir Şekilde Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            listele();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            txtResim.Text=openFileDialog1.FileName;
+        }
     }
 }
