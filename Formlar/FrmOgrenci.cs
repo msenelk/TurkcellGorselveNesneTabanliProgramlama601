@@ -53,5 +53,17 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             listele();
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtNumara.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSifre.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            // txtResim.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            // cmbBolum.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
     }
 }
