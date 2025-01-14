@@ -23,6 +23,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
             listele();
+            dataGridView1.Columns["OgrBolum"].Visible = false;
             // Bölümleri getiriyoruz.
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Select * from TblBolum", baglanti);
@@ -46,6 +47,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                x.OgrSifre,
                                x.OgrEposta,
                                x.OgrResim,
+                               x.OgrBolum,
                                x.TblBolum.BolumAd
                            };
 
@@ -74,8 +76,8 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             txtNumara.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtSifre.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            // txtResim.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            // cmbBolum.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtResim.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cmbBolum.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
     }
 }
