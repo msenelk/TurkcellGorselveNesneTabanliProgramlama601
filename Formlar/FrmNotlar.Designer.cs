@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.btnListele = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnNumaraBul = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSınav1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.txtSınav2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNumara = new System.Windows.Forms.TextBox();
+            this.txtSınav3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbBolum = new System.Windows.Forms.ComboBox();
+            this.cmbDers = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtResim = new System.Windows.Forms.TextBox();
+            this.txtProje = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtQuiz2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.txtQuiz1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOgrenci = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnHesapla = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,31 +63,31 @@
             // 
             this.btnListele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnListele.ForeColor = System.Drawing.Color.White;
-            this.btnListele.Location = new System.Drawing.Point(116, 427);
+            this.btnListele.Location = new System.Drawing.Point(187, 378);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(134, 43);
+            this.btnListele.Size = new System.Drawing.Size(93, 43);
             this.btnListele.TabIndex = 27;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnNumaraBul
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(286, 299);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 24);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnNumaraBul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnNumaraBul.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnNumaraBul.Location = new System.Drawing.Point(286, 299);
+            this.btnNumaraBul.Name = "btnNumaraBul";
+            this.btnNumaraBul.Size = new System.Drawing.Size(38, 24);
+            this.btnNumaraBul.TabIndex = 26;
+            this.btnNumaraBul.Text = "...";
+            this.btnNumaraBul.UseVisualStyleBackColor = false;
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(116, 378);
+            this.btnGuncelle.Location = new System.Drawing.Point(87, 378);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(134, 43);
+            this.btnGuncelle.Size = new System.Drawing.Size(94, 43);
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
@@ -100,14 +102,14 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Sınav Notları Formu";
             // 
-            // txtAd
+            // txtSınav1
             // 
-            this.txtAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtAd.ForeColor = System.Drawing.Color.White;
-            this.txtAd.Location = new System.Drawing.Point(87, 82);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(193, 24);
-            this.txtAd.TabIndex = 1;
+            this.txtSınav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSınav1.ForeColor = System.Drawing.Color.White;
+            this.txtSınav1.Location = new System.Drawing.Point(87, 82);
+            this.txtSınav1.Name = "txtSınav1";
+            this.txtSınav1.Size = new System.Drawing.Size(193, 24);
+            this.txtSınav1.TabIndex = 1;
             // 
             // label9
             // 
@@ -119,14 +121,14 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Sınav 1:";
             // 
-            // txtSoyad
+            // txtSınav2
             // 
-            this.txtSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtSoyad.ForeColor = System.Drawing.Color.White;
-            this.txtSoyad.Location = new System.Drawing.Point(87, 112);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(193, 24);
-            this.txtSoyad.TabIndex = 2;
+            this.txtSınav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSınav2.ForeColor = System.Drawing.Color.White;
+            this.txtSınav2.Location = new System.Drawing.Point(87, 112);
+            this.txtSınav2.Name = "txtSınav2";
+            this.txtSınav2.Size = new System.Drawing.Size(193, 24);
+            this.txtSınav2.TabIndex = 2;
             // 
             // label2
             // 
@@ -138,14 +140,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Sınav 2:";
             // 
-            // txtNumara
+            // txtSınav3
             // 
-            this.txtNumara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtNumara.ForeColor = System.Drawing.Color.White;
-            this.txtNumara.Location = new System.Drawing.Point(87, 142);
-            this.txtNumara.Name = "txtNumara";
-            this.txtNumara.Size = new System.Drawing.Size(193, 24);
-            this.txtNumara.TabIndex = 3;
+            this.txtSınav3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSınav3.ForeColor = System.Drawing.Color.White;
+            this.txtSınav3.Location = new System.Drawing.Point(87, 142);
+            this.txtSınav3.Name = "txtSınav3";
+            this.txtSınav3.Size = new System.Drawing.Size(193, 24);
+            this.txtSınav3.TabIndex = 3;
             // 
             // label1
             // 
@@ -157,19 +159,19 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Sınav 3:";
             // 
-            // cmbBolum
+            // cmbDers
             // 
-            this.cmbBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbBolum.ForeColor = System.Drawing.Color.White;
-            this.cmbBolum.FormattingEnabled = true;
-            this.cmbBolum.Items.AddRange(new object[] {
+            this.cmbDers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbDers.ForeColor = System.Drawing.Color.White;
+            this.cmbDers.FormattingEnabled = true;
+            this.cmbDers.Items.AddRange(new object[] {
             "Yazılım Mühendisliği",
             "Bilgisayar Mühendisliği",
             "Endüstri Mühendisliği"});
-            this.cmbBolum.Location = new System.Drawing.Point(87, 267);
-            this.cmbBolum.Name = "cmbBolum";
-            this.cmbBolum.Size = new System.Drawing.Size(193, 26);
-            this.cmbBolum.TabIndex = 8;
+            this.cmbDers.Location = new System.Drawing.Point(87, 267);
+            this.cmbDers.Name = "cmbDers";
+            this.cmbDers.Size = new System.Drawing.Size(193, 26);
+            this.cmbDers.TabIndex = 8;
             // 
             // label5
             // 
@@ -181,14 +183,14 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Ders:";
             // 
-            // txtResim
+            // txtProje
             // 
-            this.txtResim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtResim.ForeColor = System.Drawing.Color.White;
-            this.txtResim.Location = new System.Drawing.Point(87, 237);
-            this.txtResim.Name = "txtResim";
-            this.txtResim.Size = new System.Drawing.Size(193, 24);
-            this.txtResim.TabIndex = 7;
+            this.txtProje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtProje.ForeColor = System.Drawing.Color.White;
+            this.txtProje.Location = new System.Drawing.Point(87, 237);
+            this.txtProje.Name = "txtProje";
+            this.txtProje.Size = new System.Drawing.Size(193, 24);
+            this.txtProje.TabIndex = 7;
             // 
             // label6
             // 
@@ -200,14 +202,14 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Proje:";
             // 
-            // txtMail
+            // txtQuiz2
             // 
-            this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtMail.ForeColor = System.Drawing.Color.White;
-            this.txtMail.Location = new System.Drawing.Point(87, 207);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(193, 24);
-            this.txtMail.TabIndex = 6;
+            this.txtQuiz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtQuiz2.ForeColor = System.Drawing.Color.White;
+            this.txtQuiz2.Location = new System.Drawing.Point(87, 207);
+            this.txtQuiz2.Name = "txtQuiz2";
+            this.txtQuiz2.Size = new System.Drawing.Size(193, 24);
+            this.txtQuiz2.TabIndex = 6;
             // 
             // label7
             // 
@@ -239,14 +241,14 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Id:";
             // 
-            // txtSifre
+            // txtQuiz1
             // 
-            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtSifre.ForeColor = System.Drawing.Color.White;
-            this.txtSifre.Location = new System.Drawing.Point(87, 172);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(193, 24);
-            this.txtSifre.TabIndex = 4;
+            this.txtQuiz1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtQuiz1.ForeColor = System.Drawing.Color.White;
+            this.txtQuiz1.Location = new System.Drawing.Point(87, 172);
+            this.txtQuiz1.Name = "txtQuiz1";
+            this.txtQuiz1.Size = new System.Drawing.Size(193, 24);
+            this.txtQuiz1.TabIndex = 4;
             // 
             // label3
             // 
@@ -258,66 +260,56 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Quiz 1:";
             // 
-            // btnSil
-            // 
-            this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(116, 329);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(134, 43);
-            this.btnSil.TabIndex = 9;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 126);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(895, 482);
+            this.dataGridView1.Size = new System.Drawing.Size(895, 368);
             this.dataGridView1.TabIndex = 4;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnEkle);
+            this.groupBox1.Controls.Add(this.txtOgrenci);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnListele);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.btnNumaraBul);
             this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.txtSınav1);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.txtSınav2);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtNumara);
+            this.groupBox1.Controls.Add(this.txtSınav3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cmbBolum);
+            this.groupBox1.Controls.Add(this.cmbDers);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtResim);
+            this.groupBox1.Controls.Add(this.txtProje);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtMail);
+            this.groupBox1.Controls.Add(this.txtQuiz2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtSifre);
+            this.groupBox1.Controls.Add(this.txtQuiz1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnSil);
+            this.groupBox1.Controls.Add(this.btnHesapla);
             this.groupBox1.Location = new System.Drawing.Point(913, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(344, 486);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // txtOgrenci
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(87, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 24);
-            this.textBox1.TabIndex = 28;
+            this.txtOgrenci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrenci.ForeColor = System.Drawing.Color.White;
+            this.txtOgrenci.Location = new System.Drawing.Point(87, 299);
+            this.txtOgrenci.Name = "txtOgrenci";
+            this.txtOgrenci.Size = new System.Drawing.Size(193, 24);
+            this.txtOgrenci.TabIndex = 28;
             // 
             // label10
             // 
@@ -329,12 +321,43 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Öğrenci:";
             // 
+            // btnHesapla
+            // 
+            this.btnHesapla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnHesapla.ForeColor = System.Drawing.Color.White;
+            this.btnHesapla.Location = new System.Drawing.Point(187, 329);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(94, 43);
+            this.btnHesapla.TabIndex = 9;
+            this.btnHesapla.Text = "Hesapla";
+            this.btnHesapla.UseVisualStyleBackColor = false;
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(87, 329);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(94, 43);
+            this.btnEkle.TabIndex = 30;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(12, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(895, 106);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            // 
             // FrmNotlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1269, 502);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -354,29 +377,31 @@
         #endregion
 
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNumaraBul;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSınav1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.TextBox txtSınav2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNumara;
+        private System.Windows.Forms.TextBox txtSınav3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbBolum;
+        private System.Windows.Forms.ComboBox cmbDers;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtResim;
+        private System.Windows.Forms.TextBox txtProje;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.TextBox txtQuiz2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.TextBox txtQuiz1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOgrenci;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnHesapla;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
