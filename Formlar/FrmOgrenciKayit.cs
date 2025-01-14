@@ -60,5 +60,11 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             }
            
         }
+
+        private void btnResimSec_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            txtOgrResim.Text = openFileDialog1.FileName;
+        }
     }
 }
