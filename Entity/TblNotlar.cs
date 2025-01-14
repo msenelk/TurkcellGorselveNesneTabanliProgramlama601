@@ -20,7 +20,6 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Entity
         public Nullable<byte> Sinav3 { get; set; }
         public Nullable<byte> Quiz1 { get; set; }
         public Nullable<byte> Quiz2 { get; set; }
-        public Nullable<byte> EkPuan { get; set; }
         public Nullable<byte> Proje { get; set; }
         public Nullable<int> Ders { get; set; }
         public Nullable<int> Ogrenci { get; set; }

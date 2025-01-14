@@ -40,7 +40,6 @@
           <Property Name="Sinav3" Type="tinyint" />
           <Property Name="Quiz1" Type="tinyint" />
           <Property Name="Quiz2" Type="tinyint" />
-          <Property Name="EkPuan" Type="tinyint" />
           <Property Name="Proje" Type="tinyint" />
           <Property Name="Ders" Type="int" />
           <Property Name="Ogrenci" Type="int" />
@@ -155,7 +154,6 @@
           <Property Name="Sinav3" Type="Byte" />
           <Property Name="Quiz1" Type="Byte" />
           <Property Name="Quiz2" Type="Byte" />
-          <Property Name="EkPuan" Type="Byte" />
           <Property Name="Proje" Type="Byte" />
           <Property Name="Ders" Type="Int32" />
           <Property Name="Ogrenci" Type="Int32" />
@@ -276,7 +274,6 @@
                 <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
                 <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
                 <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
-                <ScalarProperty Name="EkPuan" ColumnName="EkPuan" />
                 <ScalarProperty Name="Proje" ColumnName="Proje" />
                 <ScalarProperty Name="Ders" ColumnName="Ders" />
                 <ScalarProperty Name="Ogrenci" ColumnName="Ogrenci" />

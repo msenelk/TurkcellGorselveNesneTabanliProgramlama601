@@ -164,10 +164,6 @@
             this.cmbDers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.cmbDers.ForeColor = System.Drawing.Color.White;
             this.cmbDers.FormattingEnabled = true;
-            this.cmbDers.Items.AddRange(new object[] {
-            "Yazılım Mühendisliği",
-            "Bilgisayar Mühendisliği",
-            "Endüstri Mühendisliği"});
             this.cmbDers.Location = new System.Drawing.Point(87, 267);
             this.cmbDers.Name = "cmbDers";
             this.cmbDers.Size = new System.Drawing.Size(193, 26);
