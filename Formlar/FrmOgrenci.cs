@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,21 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             InitializeComponent();
         }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=MSENELK\SQLEXPRESS;Initial Catalog=OgrenciSinav;Integrated Security=True");
         OgrenciSinavEntities db=new OgrenciSinavEntities();
         private void FrmOgrenci_Load(object sender, EventArgs e)
         {
             listele();
+            // Bölümleri getiriyoruz.
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select * from TblBolum", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable ds = new DataTable(); // Combobox'a veri getirilirken DataTable getirilir.
+            da.Fill(ds);
+            cmbBolum.ValueMember = "BolumID";
+            cmbBolum.DisplayMember = "BolumAd";
+            cmbBolum.DataSource = ds;
+            // Bölümleri getiriyoruz.
         }
         void listele()
         {
