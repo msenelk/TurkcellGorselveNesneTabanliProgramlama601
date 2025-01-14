@@ -48,7 +48,8 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                x.OgrEposta,
                                x.OgrResim,
                                x.OgrBolum,
-                               x.TblBolum.BolumAd
+                               x.TblBolum.BolumAd,
+                               x.OgrDurum
                            };
 
             dataGridView1.DataSource = degerler.ToList();
@@ -61,6 +62,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             dataGridView1.Columns[5].HeaderText = "Öğrenci Mail";
             dataGridView1.Columns[6].HeaderText = "Öğrenci Resim";
             dataGridView1.Columns[7].HeaderText = "Öğrenci Bölümü";
+            dataGridView1.Columns[8].HeaderText = "Öğrenci Durumu";
 
         }
         private void btnListele_Click(object sender, EventArgs e)
