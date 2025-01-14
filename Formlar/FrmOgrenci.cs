@@ -82,5 +82,15 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             txtResim.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             cmbBolum.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var x = db.TblOgrenci.Find(id);
+            x.OgrDurum = false;
+            db.SaveChanges();
+            MessageBox.Show("Öğrenci Başarılı Bir Şekilde Sistemden Silindi, Silinen Öğrenciler Pasif Öğrenciler Listesi Üzerinden Erişim Sağlayabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            listele();
+        }
     }
 }
