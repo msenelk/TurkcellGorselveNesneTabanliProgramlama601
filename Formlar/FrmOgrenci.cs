@@ -24,6 +24,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             listele();
             dataGridView1.Columns["OgrBolum"].Visible = false;
+            dataGridView1.Columns["OgrDurum"].Visible = false;
             // Bölümleri getiriyoruz.
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Select * from TblBolum", baglanti);
@@ -52,7 +53,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                x.OgrDurum
                            };
 
-            dataGridView1.DataSource = degerler.ToList();
+            dataGridView1.DataSource = degerler.Where(x=>x.OgrDurum==true).ToList();
             // Satır başlıklarına isim verdik.
             dataGridView1.Columns[0].HeaderText = "Öğrenci ID";
             dataGridView1.Columns[1].HeaderText = "Öğrenci Adı";
