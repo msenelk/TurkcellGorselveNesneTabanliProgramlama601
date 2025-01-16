@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurkcellGorselveNesneTabanliProgramlama601.Entity;
 
 namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
@@ -15,6 +16,13 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         public FrmNotlar()
         {
             InitializeComponent();
+        }
+        OgrenciSinavEntities db = new OgrenciSinavEntities();
+        private void FrmNotlar_Load(object sender, EventArgs e)
+        {
+            cmbDers.DisplayMember = "DersAd"; // Ön yüzde gözükecek alan
+            cmbDers.ValueMember = "DersID"; // Arka yüzde gözükecek alan
+            cmbDers.DataSource = db.TblDersler.ToList();
         }
     }
 }
