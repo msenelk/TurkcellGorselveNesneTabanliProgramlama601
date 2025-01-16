@@ -36,9 +36,25 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             t.Quiz2=byte.Parse(txtQuiz2.Text);
             t.Ders = int.Parse(cmbDers.SelectedValue.ToString());
             t.Ogrenci=int.Parse(txtOgrenci.Text);
+            t.Ortalama = int.Parse(txtOrtalama.Text);
             db.TblNotlar.Add(t);
             db.SaveChanges();
             MessageBox.Show("Öğrenci Not Bilgisi İçin Sisteme Kaydedildi");
+        }
+
+        private void btnHesapla_Click(object sender, EventArgs e)
+        {
+            byte s1, s2, s3, q1, q2, proje;
+            double ortalama;
+
+            s1 = Convert.ToByte(txtSinav1.Text);
+            s2 = Convert.ToByte(txtSinav2.Text);
+            s3 = Convert.ToByte(txtSinav3.Text);
+            q1 = byte.Parse(txtQuiz1.Text);
+            q2 = byte.Parse(txtQuiz2.Text);
+            proje=byte.Parse(txtProje.Text);
+            ortalama=(s1+s2+s3+q1+q2+proje)/ 7;
+            txtOrtalama.Text=ortalama.ToString(); 
         }
     }
 }
