@@ -32,11 +32,11 @@
             this.btnNumaraBul = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSınav1 = new System.Windows.Forms.TextBox();
+            this.txtSinav1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtSınav2 = new System.Windows.Forms.TextBox();
+            this.txtSinav2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSınav3 = new System.Windows.Forms.TextBox();
+            this.txtSinav3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDers = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -102,14 +102,14 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Sınav Notları Formu";
             // 
-            // txtSınav1
+            // txtSinav1
             // 
-            this.txtSınav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtSınav1.ForeColor = System.Drawing.Color.White;
-            this.txtSınav1.Location = new System.Drawing.Point(87, 82);
-            this.txtSınav1.Name = "txtSınav1";
-            this.txtSınav1.Size = new System.Drawing.Size(193, 24);
-            this.txtSınav1.TabIndex = 1;
+            this.txtSinav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSinav1.ForeColor = System.Drawing.Color.White;
+            this.txtSinav1.Location = new System.Drawing.Point(87, 82);
+            this.txtSinav1.Name = "txtSinav1";
+            this.txtSinav1.Size = new System.Drawing.Size(193, 24);
+            this.txtSinav1.TabIndex = 1;
             // 
             // label9
             // 
@@ -121,14 +121,14 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Sınav 1:";
             // 
-            // txtSınav2
+            // txtSinav2
             // 
-            this.txtSınav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtSınav2.ForeColor = System.Drawing.Color.White;
-            this.txtSınav2.Location = new System.Drawing.Point(87, 112);
-            this.txtSınav2.Name = "txtSınav2";
-            this.txtSınav2.Size = new System.Drawing.Size(193, 24);
-            this.txtSınav2.TabIndex = 2;
+            this.txtSinav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSinav2.ForeColor = System.Drawing.Color.White;
+            this.txtSinav2.Location = new System.Drawing.Point(87, 112);
+            this.txtSinav2.Name = "txtSinav2";
+            this.txtSinav2.Size = new System.Drawing.Size(193, 24);
+            this.txtSinav2.TabIndex = 2;
             // 
             // label2
             // 
@@ -140,14 +140,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Sınav 2:";
             // 
-            // txtSınav3
+            // txtSinav3
             // 
-            this.txtSınav3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtSınav3.ForeColor = System.Drawing.Color.White;
-            this.txtSınav3.Location = new System.Drawing.Point(87, 142);
-            this.txtSınav3.Name = "txtSınav3";
-            this.txtSınav3.Size = new System.Drawing.Size(193, 24);
-            this.txtSınav3.TabIndex = 3;
+            this.txtSinav3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSinav3.ForeColor = System.Drawing.Color.White;
+            this.txtSinav3.Location = new System.Drawing.Point(87, 142);
+            this.txtSinav3.Name = "txtSinav3";
+            this.txtSinav3.Size = new System.Drawing.Size(193, 24);
+            this.txtSinav3.TabIndex = 3;
             // 
             // label1
             // 
@@ -275,11 +275,11 @@
             this.groupBox1.Controls.Add(this.btnNumaraBul);
             this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtSınav1);
+            this.groupBox1.Controls.Add(this.txtSinav1);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtSınav2);
+            this.groupBox1.Controls.Add(this.txtSinav2);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtSınav3);
+            this.groupBox1.Controls.Add(this.txtSinav3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbDers);
             this.groupBox1.Controls.Add(this.label5);
@@ -308,6 +308,7 @@
             this.btnEkle.TabIndex = 30;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // txtOgrenci
             // 
@@ -377,11 +378,11 @@
         private System.Windows.Forms.Button btnNumaraBul;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSınav1;
+        private System.Windows.Forms.TextBox txtSinav1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSınav2;
+        private System.Windows.Forms.TextBox txtSinav2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSınav3;
+        private System.Windows.Forms.TextBox txtSinav3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDers;
         private System.Windows.Forms.Label label5;

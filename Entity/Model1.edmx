@@ -41,6 +41,7 @@
           <Property Name="Quiz1" Type="tinyint" />
           <Property Name="Quiz2" Type="tinyint" />
           <Property Name="Proje" Type="tinyint" />
+          <Property Name="Ortalama" Type="decimal" Precision="5" Scale="2" />
           <Property Name="Ders" Type="int" />
           <Property Name="Ogrenci" Type="int" />
         </EntityType>
@@ -159,6 +160,7 @@
           <Property Name="Ogrenci" Type="Int32" />
           <NavigationProperty Name="TblDersler" Relationship="Self.FK_TblNotlar_TblDersler" FromRole="TblNotlar" ToRole="TblDersler" />
           <NavigationProperty Name="TblOgrenci" Relationship="Self.FK_TblNotlar_TblOgrenci" FromRole="TblNotlar" ToRole="TblOgrenci" />
+          <Property Name="Ortalama" Type="Decimal" Precision="5" Scale="2" />
         </EntityType>
         <EntityType Name="TblOgrenci">
           <Key>
@@ -268,6 +270,7 @@
           <EntitySetMapping Name="TblNotlar">
             <EntityTypeMapping TypeName="OgrenciSinavModel.TblNotlar">
               <MappingFragment StoreEntitySet="TblNotlar">
+                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
                 <ScalarProperty Name="NotID" ColumnName="NotID" />
                 <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
                 <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
