@@ -56,5 +56,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             ortalama=(s1+s2+s3+q1+q2+proje)/ 7;
             txtOrtalama.Text=ortalama.ToString(); 
         }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.View_1.ToList();
+        }
     }
 }

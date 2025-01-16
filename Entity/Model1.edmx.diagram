@@ -13,6 +13,7 @@
         <AssociationConnector Association="OgrenciSinavModel.FK_TblOgrenci_TblBolum" ManuallyRouted="false" />
         <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblDersler" ManuallyRouted="false" />
         <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblOgrenci" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OgrenciSinavModel.View_1" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

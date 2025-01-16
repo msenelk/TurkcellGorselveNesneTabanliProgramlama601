@@ -94,6 +94,9 @@
     <Compile Include="Entity\TblOgrenci.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\View_1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmBolumler.cs">
       <SubType>Form</SubType>
     </Compile>
