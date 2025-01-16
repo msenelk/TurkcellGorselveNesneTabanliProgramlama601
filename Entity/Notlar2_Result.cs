@@ -10,11 +10,12 @@
 namespace TurkcellGorselveNesneTabanliProgramlama601.Entity
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TblNotlar
+    public partial class Notlar2_Result
     {
-        public int NotID { get; set; }
+        public int Not_ID { get; set; }
+        public string Ders_Adı { get; set; }
+        public string Öğrenci { get; set; }
         public Nullable<int> Sinav1 { get; set; }
         public Nullable<int> Sinav2 { get; set; }
         public Nullable<int> Sinav3 { get; set; }
@@ -22,10 +23,5 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Entity
         public Nullable<int> Quiz2 { get; set; }
         public Nullable<int> Proje { get; set; }
         public Nullable<decimal> Ortalama { get; set; }
-        public Nullable<int> Ders { get; set; }
-        public Nullable<int> Ogrenci { get; set; }
-    
-        public virtual TblDersler TblDersler { get; set; }
-        public virtual TblOgrenci TblOgrenci { get; set; }
     }
 }

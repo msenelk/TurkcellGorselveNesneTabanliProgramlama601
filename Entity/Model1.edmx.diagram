@@ -8,13 +8,13 @@
         <EntityTypeShape EntityType="OgrenciSinavModel.TblAkademisyen" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OgrenciSinavModel.TblBolum" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OgrenciSinavModel.TblDersler" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="OgrenciSinavModel.TblNotlar" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="OgrenciSinavModel.TblOgrenci" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="OgrenciSinavModel.FK_TblOgrenci_TblBolum" ManuallyRouted="false" />
-        <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblDersler" ManuallyRouted="false" />
-        <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblOgrenci" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OgrenciSinavModel.TblNotlar" Width="1.5" PointX="5.25" PointY="1.625" />
         <EntityTypeShape EntityType="OgrenciSinavModel.View_1" Width="1.5" PointX="7.375" PointY="0.75" />
-      </Diagram>
+        <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblDersler" />
+        <AssociationConnector Association="OgrenciSinavModel.FK_TblNotlar_TblOgrenci" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

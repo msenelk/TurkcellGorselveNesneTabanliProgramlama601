@@ -35,12 +35,12 @@
             <PropertyRef Name="NotID" />
           </Key>
           <Property Name="NotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Sinav1" Type="tinyint" />
-          <Property Name="Sinav2" Type="tinyint" />
-          <Property Name="Sinav3" Type="tinyint" />
-          <Property Name="Quiz1" Type="tinyint" />
-          <Property Name="Quiz2" Type="tinyint" />
-          <Property Name="Proje" Type="tinyint" />
+          <Property Name="Sinav1" Type="int" />
+          <Property Name="Sinav2" Type="int" />
+          <Property Name="Sinav3" Type="int" />
+          <Property Name="Quiz1" Type="int" />
+          <Property Name="Quiz2" Type="int" />
+          <Property Name="Proje" Type="int" />
           <Property Name="Ortalama" Type="decimal" Precision="5" Scale="2" />
           <Property Name="Ders" Type="int" />
           <Property Name="Ogrenci" Type="int" />
@@ -113,7 +113,8 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="Notlar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Notlar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Notlar3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="OgrenciSinavModelStoreContainer">
           <EntitySet Name="TblAkademisyen" EntityType="Self.TblAkademisyen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblBolum" EntityType="Self.TblBolum" Schema="dbo" store:Type="Tables" />
@@ -177,24 +178,7 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
           </Key>
           <Property Name="DersID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DersAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TblNotlar" Relationship="Self.FK_TblNotlar_TblDersler" FromRole="TblDersler" ToRole="TblNotlar" />
-        </EntityType>
-        <EntityType Name="TblNotlar">
-          <Key>
-            <PropertyRef Name="NotID" />
-          </Key>
-          <Property Name="NotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Sinav1" Type="Byte" />
-          <Property Name="Sinav2" Type="Byte" />
-          <Property Name="Sinav3" Type="Byte" />
-          <Property Name="Quiz1" Type="Byte" />
-          <Property Name="Quiz2" Type="Byte" />
-          <Property Name="Proje" Type="Byte" />
-          <Property Name="Ders" Type="Int32" />
-          <Property Name="Ogrenci" Type="Int32" />
-          <NavigationProperty Name="TblDersler" Relationship="Self.FK_TblNotlar_TblDersler" FromRole="TblNotlar" ToRole="TblDersler" />
-          <NavigationProperty Name="TblOgrenci" Relationship="Self.FK_TblNotlar_TblOgrenci" FromRole="TblNotlar" ToRole="TblOgrenci" />
-          <Property Name="Ortalama" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="TblNotlar" Relationship="OgrenciSinavModel.FK_TblNotlar_TblDersler" FromRole="TblDersler" ToRole="TblNotlar" />
         </EntityType>
         <EntityType Name="TblOgrenci">
           <Key>
@@ -209,8 +193,8 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
           <Property Name="OgrResim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="OgrBolum" Type="Int32" />
           <NavigationProperty Name="TblBolum" Relationship="Self.FK_TblOgrenci_TblBolum" FromRole="TblOgrenci" ToRole="TblBolum" />
-          <NavigationProperty Name="TblNotlar" Relationship="Self.FK_TblNotlar_TblOgrenci" FromRole="TblOgrenci" ToRole="TblNotlar" />
           <Property Name="OgrDurum" Type="Boolean" />
+          <NavigationProperty Name="TblNotlar" Relationship="OgrenciSinavModel.FK_TblNotlar_TblOgrenci" FromRole="TblOgrenci" ToRole="TblNotlar" />
         </EntityType>
         <Association Name="FK_TblOgrenci_TblBolum">
           <End Role="TblBolum" Type="Self.TblBolum" Multiplicity="0..1" />
@@ -224,51 +208,82 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TblNotlar_TblDersler">
-          <End Role="TblDersler" Type="Self.TblDersler" Multiplicity="0..1" />
-          <End Role="TblNotlar" Type="Self.TblNotlar" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblDersler">
-              <PropertyRef Name="DersID" />
-            </Principal>
-            <Dependent Role="TblNotlar">
-              <PropertyRef Name="Ders" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TblNotlar_TblOgrenci">
-          <End Role="TblOgrenci" Type="Self.TblOgrenci" Multiplicity="0..1" />
-          <End Role="TblNotlar" Type="Self.TblNotlar" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblOgrenci">
-              <PropertyRef Name="OgrID" />
-            </Principal>
-            <Dependent Role="TblNotlar">
-              <PropertyRef Name="Ogrenci" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="OgrenciSinavEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblAkademisyen" EntityType="Self.TblAkademisyen" />
           <EntitySet Name="TblBolum" EntityType="Self.TblBolum" />
           <EntitySet Name="TblDersler" EntityType="Self.TblDersler" />
-          <EntitySet Name="TblNotlar" EntityType="Self.TblNotlar" />
           <EntitySet Name="TblOgrenci" EntityType="Self.TblOgrenci" />
           <AssociationSet Name="FK_TblOgrenci_TblBolum" Association="Self.FK_TblOgrenci_TblBolum">
             <End Role="TblBolum" EntitySet="TblBolum" />
             <End Role="TblOgrenci" EntitySet="TblOgrenci" />
           </AssociationSet>
-          <AssociationSet Name="FK_TblNotlar_TblDersler" Association="Self.FK_TblNotlar_TblDersler">
+          <FunctionImport Name="Notlar" ReturnType="Collection(OgrenciSinavModel.Notlar_Result)" />
+          <FunctionImport Name="Notlar2" ReturnType="Collection(OgrenciSinavModel.Notlar2_Result)" />
+          <FunctionImport Name="Notlar3" ReturnType="Collection(OgrenciSinavModel.Notlar3_Result)" />
+          <EntitySet Name="TblNotlar" EntityType="OgrenciSinavModel.TblNotlar" />
+          <EntitySet Name="View_1" EntityType="OgrenciSinavModel.View_1" />
+          <AssociationSet Name="FK_TblNotlar_TblDersler" Association="OgrenciSinavModel.FK_TblNotlar_TblDersler">
             <End Role="TblDersler" EntitySet="TblDersler" />
             <End Role="TblNotlar" EntitySet="TblNotlar" />
           </AssociationSet>
-          <AssociationSet Name="FK_TblNotlar_TblOgrenci" Association="Self.FK_TblNotlar_TblOgrenci">
+          <AssociationSet Name="FK_TblNotlar_TblOgrenci" Association="OgrenciSinavModel.FK_TblNotlar_TblOgrenci">
             <End Role="TblOgrenci" EntitySet="TblOgrenci" />
             <End Role="TblNotlar" EntitySet="TblNotlar" />
           </AssociationSet>
-          <EntitySet Name="View_1" EntityType="OgrenciSinavModel.View_1" />
-          <FunctionImport Name="Notlar" ReturnType="Collection(OgrenciSinavModel.Notlar_Result)" />
-        </EntityContainer>
+          </EntityContainer>
+        <ComplexType Name="Notlar_Result">
+          <Property Type="Int32" Name="Not_ID" Nullable="false" />
+          <Property Type="String" Name="Ders_Adı" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Öğrenci" Nullable="true" MaxLength="46" />
+          <Property Type="Byte" Name="Sinav1" Nullable="true" />
+          <Property Type="Byte" Name="Sinav2" Nullable="true" />
+          <Property Type="Byte" Name="Sinav3" Nullable="true" />
+          <Property Type="Byte" Name="Quiz1" Nullable="true" />
+          <Property Type="Byte" Name="Quiz2" Nullable="true" />
+          <Property Type="Byte" Name="Proje" Nullable="true" />
+          <Property Type="Decimal" Name="Ortalama" Nullable="true" Precision="5" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="Notlar2_Result">
+          <Property Type="Int32" Name="Not_ID" Nullable="false" />
+          <Property Type="String" Name="Ders_Adı" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Öğrenci" Nullable="true" MaxLength="46" />
+          <Property Type="Int32" Name="Sinav1" Nullable="true" />
+          <Property Type="Int32" Name="Sinav2" Nullable="true" />
+          <Property Type="Int32" Name="Sinav3" Nullable="true" />
+          <Property Type="Int32" Name="Quiz1" Nullable="true" />
+          <Property Type="Int32" Name="Quiz2" Nullable="true" />
+          <Property Type="Int32" Name="Proje" Nullable="true" />
+          <Property Type="Decimal" Name="Ortalama" Nullable="true" Precision="5" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="Notlar3_Result">
+          <Property Type="Int32" Name="Not_ID" Nullable="false" />
+          <Property Type="String" Name="Ders_Adı" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Öğrenci" Nullable="true" MaxLength="46" />
+          <Property Type="Int32" Name="Sinav1" Nullable="true" />
+          <Property Type="Int32" Name="Sinav2" Nullable="true" />
+          <Property Type="Int32" Name="Sinav3" Nullable="true" />
+          <Property Type="Int32" Name="Quiz1" Nullable="true" />
+          <Property Type="Int32" Name="Quiz2" Nullable="true" />
+          <Property Type="Int32" Name="Proje" Nullable="true" />
+          <Property Type="Decimal" Name="Ortalama" Nullable="true" Precision="5" Scale="2" />
+        </ComplexType>
+        <EntityType Name="TblNotlar">
+          <Key>
+            <PropertyRef Name="NotID" />
+          </Key>
+          <Property Name="NotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sinav1" Type="Int32" />
+          <Property Name="Sinav2" Type="Int32" />
+          <Property Name="Sinav3" Type="Int32" />
+          <Property Name="Quiz1" Type="Int32" />
+          <Property Name="Quiz2" Type="Int32" />
+          <Property Name="Proje" Type="Int32" />
+          <Property Name="Ortalama" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Ders" Type="Int32" />
+          <Property Name="Ogrenci" Type="Int32" />
+          <NavigationProperty Name="TblDersler" Relationship="OgrenciSinavModel.FK_TblNotlar_TblDersler" FromRole="TblNotlar" ToRole="TblDersler" />
+          <NavigationProperty Name="TblOgrenci" Relationship="OgrenciSinavModel.FK_TblNotlar_TblOgrenci" FromRole="TblNotlar" ToRole="TblOgrenci" />
+        </EntityType>
         <EntityType Name="View_1">
           <Key>
             <PropertyRef Name="NotID" />
@@ -285,19 +300,31 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
           <Property Name="Proje" Type="Byte" />
           <Property Name="Ortalama" Type="Decimal" Precision="5" Scale="2" />
         </EntityType>
-        <ComplexType Name="Notlar_Result">
-          <Property Type="Int32" Name="Not_ID" Nullable="false" />
-          <Property Type="String" Name="Ders_Adı" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Öğrenci" Nullable="true" MaxLength="46" />
-          <Property Type="Byte" Name="Sinav1" Nullable="true" />
-          <Property Type="Byte" Name="Sinav2" Nullable="true" />
-          <Property Type="Byte" Name="Sinav3" Nullable="true" />
-          <Property Type="Byte" Name="Quiz1" Nullable="true" />
-          <Property Type="Byte" Name="Quiz2" Nullable="true" />
-          <Property Type="Byte" Name="Proje" Nullable="true" />
-          <Property Type="Decimal" Name="Ortalama" Nullable="true" Precision="5" Scale="2" />
-        </ComplexType>
-      </Schema>
+        <Association Name="FK_TblNotlar_TblDersler">
+          <End Type="OgrenciSinavModel.TblDersler" Role="TblDersler" Multiplicity="0..1" />
+          <End Type="OgrenciSinavModel.TblNotlar" Role="TblNotlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblDersler">
+              <PropertyRef Name="DersID" />
+            </Principal>
+            <Dependent Role="TblNotlar">
+              <PropertyRef Name="Ders" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblNotlar_TblOgrenci">
+          <End Type="OgrenciSinavModel.TblOgrenci" Role="TblOgrenci" Multiplicity="0..1" />
+          <End Type="OgrenciSinavModel.TblNotlar" Role="TblNotlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblOgrenci">
+              <PropertyRef Name="OgrID" />
+            </Principal>
+            <Dependent Role="TblNotlar">
+              <PropertyRef Name="Ogrenci" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -331,22 +358,6 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TblNotlar">
-            <EntityTypeMapping TypeName="OgrenciSinavModel.TblNotlar">
-              <MappingFragment StoreEntitySet="TblNotlar">
-                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
-                <ScalarProperty Name="NotID" ColumnName="NotID" />
-                <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
-                <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
-                <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
-                <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
-                <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
-                <ScalarProperty Name="Proje" ColumnName="Proje" />
-                <ScalarProperty Name="Ders" ColumnName="Ders" />
-                <ScalarProperty Name="Ogrenci" ColumnName="Ogrenci" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblOgrenci">
             <EntityTypeMapping TypeName="OgrenciSinavModel.TblOgrenci">
               <MappingFragment StoreEntitySet="TblOgrenci">
@@ -359,6 +370,54 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
                 <ScalarProperty Name="OgrEposta" ColumnName="OgrEposta" />
                 <ScalarProperty Name="OgrResim" ColumnName="OgrResim" />
                 <ScalarProperty Name="OgrBolum" ColumnName="OgrBolum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Notlar2" FunctionName="OgrenciSinavModel.Store.Notlar2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OgrenciSinavModel.Notlar2_Result">
+                <ScalarProperty Name="Not_ID" ColumnName="Not_ID" />
+                <ScalarProperty Name="Ders_Adı" ColumnName="Ders Adı" />
+                <ScalarProperty Name="Öğrenci" ColumnName="Öğrenci" />
+                <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+                <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+                <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+                <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+                <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+                <ScalarProperty Name="Proje" ColumnName="Proje" />
+                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Notlar3" FunctionName="OgrenciSinavModel.Store.Notlar3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OgrenciSinavModel.Notlar3_Result">
+                <ScalarProperty Name="Not_ID" ColumnName="Not_ID" />
+                <ScalarProperty Name="Ders_Adı" ColumnName="Ders Adı" />
+                <ScalarProperty Name="Öğrenci" ColumnName="Öğrenci" />
+                <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+                <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+                <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+                <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+                <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+                <ScalarProperty Name="Proje" ColumnName="Proje" />
+                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TblNotlar">
+            <EntityTypeMapping TypeName="OgrenciSinavModel.TblNotlar">
+              <MappingFragment StoreEntitySet="TblNotlar">
+                <ScalarProperty Name="Ogrenci" ColumnName="Ogrenci" />
+                <ScalarProperty Name="Ders" ColumnName="Ders" />
+                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+                <ScalarProperty Name="Proje" ColumnName="Proje" />
+                <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+                <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+                <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+                <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+                <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+                <ScalarProperty Name="NotID" ColumnName="NotID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -379,22 +438,6 @@ warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="Notlar" FunctionName="OgrenciSinavModel.Store.Notlar">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="OgrenciSinavModel.Notlar_Result">
-                <ScalarProperty Name="Not_ID" ColumnName="Not_ID" />
-                <ScalarProperty Name="Ders_Adı" ColumnName="Ders Adı" />
-                <ScalarProperty Name="Öğrenci" ColumnName="Öğrenci" />
-                <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
-                <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
-                <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
-                <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
-                <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
-                <ScalarProperty Name="Proje" ColumnName="Proje" />
-                <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

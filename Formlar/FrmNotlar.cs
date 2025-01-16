@@ -60,7 +60,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         private void btnListele_Click(object sender, EventArgs e)
         {
             // dataGridView1.DataSource = db.View_1.ToList();
-            dataGridView1.DataSource = db.Notlar();
+            dataGridView1.DataSource = db.Notlar3();
         }
     }
 }
