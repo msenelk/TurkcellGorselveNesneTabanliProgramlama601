@@ -79,11 +79,21 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                            select new
                            {
                                x.NotID,
+                               x.TblDersler.DersAd,
+                               Öğrenci_Adı= x.TblOgrenci.OgrAd + " " + x.TblOgrenci.OgrSoyad,
+                               // Verileri listelerken tek bir sütuna birden fazla veri yazdırmak istersek; bir tane isim adlandırarak ekleme yapıyoruz :)
                                x.Sinav1,
+                               x.Sinav2,
+                               x.Sinav3,
+                               x.Quiz1,
+                               x.Quiz2,
+                               x.Proje,
+                               x.Ortalama,
                                x.Ders,
-                               x.TblDersler.DersAd
                            };
-            dataGridView1.DataSource = degerler.Where(y => y.Ders == int.Parse(comboBox1.SelectedValue.ToString())).ToList();
+            int d = int.Parse(comboBox1.SelectedValue.ToString());
+            dataGridView1.DataSource = degerler.Where(y => y.Ders ==d).ToList();
+            dataGridView1.Columns["Ders"].Visible = false; // İlgili sütunu göstermiyoruz tabii bunu listelemeden sonra yapıyoruz.
         }
     }
 }
