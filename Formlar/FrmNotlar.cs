@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TurkcellGorselveNesneTabanliProgramlama601.Entity;
+using System.Data.Entity;
 
 namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
@@ -23,8 +24,12 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             cmbDers.DisplayMember = "DersAd"; // Ön yüzde gözükecek alan
             cmbDers.ValueMember = "DersID"; // Arka yüzde gözükecek alan
             cmbDers.DataSource = db.TblDersler.ToList();
+            Listele(); // Form açılırken listeleme işi yapılacak.
         }
-
+        private void Listele() // Listeleme için bir metot oluşturdum ki her defasında kod yazmaktansa bir kod üzerinden çağırayım.
+        {
+            dataGridView1.DataSource = db.Notlar3();
+        }
         private void btnEkle_Click(object sender, EventArgs e)
         {
             TblNotlar t = new TblNotlar();
@@ -60,7 +65,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         private void btnListele_Click(object sender, EventArgs e)
         {
             // dataGridView1.DataSource = db.View_1.ToList();
-            dataGridView1.DataSource = db.Notlar3();
+            Listele(); // Listele butonuna basıldığı zaman listeleme yapılacak.
         }
     }
 }
