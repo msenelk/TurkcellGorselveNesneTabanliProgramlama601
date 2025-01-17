@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TurkcellGorselveNesneTabanliProgramlama601.Entity;
 using System.Data.Entity;
+using DevExpress.Utils.Extensions;
 
 namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
@@ -24,6 +25,9 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             cmbDers.DisplayMember = "DersAd"; // Ön yüzde gözükecek alan
             cmbDers.ValueMember = "DersID"; // Arka yüzde gözükecek alan
             cmbDers.DataSource = db.TblDersler.ToList();
+            comboBox1.DisplayMember = "DersAd"; // Ön yüzde gözükecek alan
+            comboBox1.ValueMember = "DersID"; // Arka yüzde gözükecek alan
+            comboBox1.DataSource = db.TblDersler.ToList();
             Listele(); // Form açılırken listeleme işi yapılacak.
         }
         private void Listele() // Listeleme için bir metot oluşturdum ki her defasında kod yazmaktansa bir kod üzerinden çağırayım.
@@ -66,6 +70,20 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             // dataGridView1.DataSource = db.View_1.ToList();
             Listele(); // Listele butonuna basıldığı zaman listeleme yapılacak.
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Combobox'da seçilen değiştiğinde oluşacak senaryo:
+            var degerler = from x in db.TblNotlar
+                           select new
+                           {
+                               x.NotID,
+                               x.Sinav1,
+                               x.Ders,
+                               x.TblDersler.DersAd
+                           };
+            dataGridView1.DataSource = degerler.Where(y => y.Ders == int.Parse(comboBox1.SelectedValue.ToString())).ToList();
         }
     }
 }
