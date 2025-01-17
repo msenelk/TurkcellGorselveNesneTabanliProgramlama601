@@ -95,5 +95,27 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             dataGridView1.DataSource = degerler.Where(y => y.Ders ==d).ToList();
             dataGridView1.Columns["Ders"].Visible = false; // İlgili sütunu göstermiyoruz tabii bunu listelemeden sonra yapıyoruz.
         }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            var degerler = from x in db.TblNotlar
+                           select new
+                           {
+                               x.NotID,
+                               x.TblDersler.DersAd,
+                               Öğrenci_Adı = x.TblOgrenci.OgrAd + " " + x.TblOgrenci.OgrSoyad,
+                               x.Sinav1,
+                               x.Sinav2,
+                               x.Sinav3,
+                               x.Quiz1,
+                               x.Quiz2,
+                               x.Proje,
+                               x.Ortalama,
+                               x.Ogrenci,
+                           };
+            int i = int.Parse(txtNumaraAra.Text);
+            dataGridView1.DataSource = degerler.Where(y => y.Ogrenci == i).ToList();
+            dataGridView1.Columns["Ogrenci"].Visible = false;
+        }
     }
 }

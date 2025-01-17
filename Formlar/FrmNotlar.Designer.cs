@@ -60,8 +60,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtNumaraAra = new System.Windows.Forms.MaskedTextBox();
+            this.btnAra = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -364,8 +364,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.maskedTextBox1);
+            this.groupBox2.Controls.Add(this.btnAra);
+            this.groupBox2.Controls.Add(this.txtNumaraAra);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label12);
@@ -416,27 +416,28 @@
             this.label13.TabIndex = 34;
             this.label13.Text = "Öğrenci Numarası:";
             // 
-            // maskedTextBox1
+            // txtNumaraAra
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
-            this.maskedTextBox1.Location = new System.Drawing.Point(443, 23);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(193, 24);
-            this.maskedTextBox1.TabIndex = 35;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.txtNumaraAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtNumaraAra.ForeColor = System.Drawing.Color.White;
+            this.txtNumaraAra.Location = new System.Drawing.Point(443, 23);
+            this.txtNumaraAra.Mask = "00000";
+            this.txtNumaraAra.Name = "txtNumaraAra";
+            this.txtNumaraAra.Size = new System.Drawing.Size(193, 24);
+            this.txtNumaraAra.TabIndex = 35;
+            this.txtNumaraAra.ValidatingType = typeof(int);
             // 
-            // button1
+            // btnAra
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(667, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 24);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Location = new System.Drawing.Point(642, 23);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(70, 24);
+            this.btnAra.TabIndex = 33;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // FrmNotlar
             // 
@@ -497,8 +498,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button btnAra;
+        private System.Windows.Forms.MaskedTextBox txtNumaraAra;
         private System.Windows.Forms.Label label13;
     }
 }
