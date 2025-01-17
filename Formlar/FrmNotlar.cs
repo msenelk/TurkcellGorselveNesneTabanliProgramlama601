@@ -146,5 +146,23 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             dataGridView1.DataSource = notlar.Where(z=>z.Ogrenci==deger).ToList();
             dataGridView1.Columns["Ogrenci"].Visible = false;
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cmbDers.Text = comboBox1.Text; // Seçme işlemi yapılırken üst sırada yer alan comboboxda ki metni sağ tarafa yazdırıyoruz tabii sadece ders adı gözüküyor ders seçimi yapamayız :D
+            txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtSinav1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSinav2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtSinav3.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtQuiz1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtQuiz2.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtProje.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtOrtalama.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+        }
     }
 }
