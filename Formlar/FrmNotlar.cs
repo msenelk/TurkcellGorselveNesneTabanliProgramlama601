@@ -112,9 +112,38 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                x.Proje,
                                x.Ortalama,
                                x.Ogrenci,
+                               //x.TblOgrenci.OgrNumara
                            };
+            //var i = txtNumaraAra.Text;
+            // dataGridView1.DataSource = degerler.Where(y => y.OgrNumara == i).ToList();
+            // Yorum satırı alanı dersi başlatmadan kendim yaptım ve çalıştı.
             int i = int.Parse(txtNumaraAra.Text);
-            dataGridView1.DataSource = degerler.Where(y => y.Ogrenci == i).ToList();
+            dataGridView1.DataSource = degerler.Where(Y=>Y.Ogrenci==i).ToList();
+            dataGridView1.Columns["Ogrenci"].Visible = false;
+        }
+
+        private void btnAra2_Click(object sender, EventArgs e)
+        {
+            // Burası hocanın anlattığı
+            string no = txtNumaraAra.Text;
+            var deger = db.TblOgrenci.Where(x => x.OgrNumara == no).Select(y=>y.OgrID).FirstOrDefault();
+            txtID.Text = deger.ToString();
+            var notlar = from x in db.TblNotlar
+                         select new
+                         {
+                             x.NotID,
+                             x.TblDersler.DersAd,
+                             Öğrenci_Adı = x.TblOgrenci.OgrAd + " " + x.TblOgrenci.OgrSoyad,
+                             x.Sinav1,
+                             x.Sinav2,
+                             x.Sinav3,
+                             x.Quiz1,
+                             x.Quiz2,
+                             x.Proje,
+                             x.Ortalama,
+                             x.Ogrenci,
+                         };
+            dataGridView1.DataSource = notlar.Where(z=>z.Ogrenci==deger).ToList();
             dataGridView1.Columns["Ogrenci"].Visible = false;
         }
     }

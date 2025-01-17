@@ -62,6 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtNumaraAra = new System.Windows.Forms.MaskedTextBox();
             this.btnAra = new System.Windows.Forms.Button();
+            this.btnAra2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -364,6 +365,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAra2);
             this.groupBox2.Controls.Add(this.btnAra);
             this.groupBox2.Controls.Add(this.txtNumaraAra);
             this.groupBox2.Controls.Add(this.label13);
@@ -439,6 +441,18 @@
             this.btnAra.UseVisualStyleBackColor = false;
             this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
+            // btnAra2
+            // 
+            this.btnAra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnAra2.ForeColor = System.Drawing.Color.White;
+            this.btnAra2.Location = new System.Drawing.Point(718, 23);
+            this.btnAra2.Name = "btnAra2";
+            this.btnAra2.Size = new System.Drawing.Size(70, 24);
+            this.btnAra2.TabIndex = 36;
+            this.btnAra2.Text = "Ara 2";
+            this.btnAra2.UseVisualStyleBackColor = false;
+            this.btnAra2.Click += new System.EventHandler(this.btnAra2_Click);
+            // 
             // FrmNotlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -501,5 +515,6 @@
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.MaskedTextBox txtNumaraAra;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnAra2;
     }
 }
