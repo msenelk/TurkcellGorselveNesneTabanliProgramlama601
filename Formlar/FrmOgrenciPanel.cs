@@ -19,6 +19,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         }
 
         public string numara;
+        public string txtOgrId;
         OgrenciSinavEntities db = new OgrenciSinavEntities(); 
         private void FrmOgrenciPanel_Load(object sender, EventArgs e)
         {
@@ -29,6 +30,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             txtOgrSifre.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrSifre).FirstOrDefault();
             txtBolum.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrBolum).FirstOrDefault().ToString();
 
+            // Numarası girilen öğrencinin ıd bilgisini kendim aldım
+            txtOgrId=db.TblOgrenci.Where(x=> x.OgrNumara==numara).Select(y=>y.OgrID).FirstOrDefault().ToString();
+            // Ama burada data gride yazdıramadım.
+            dataGridView1.DataSource = db.TblNotlar.Where(x => x.Ogrenci == int.Parse(txtOgrId)).ToList();
         }
     }
 }
