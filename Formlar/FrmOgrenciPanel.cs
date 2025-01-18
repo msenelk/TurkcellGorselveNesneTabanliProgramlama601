@@ -19,7 +19,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         }
 
         public string numara;
-        public string txtOgrId;
+        public int txtOgrId;
         OgrenciSinavEntities db = new OgrenciSinavEntities(); 
         private void FrmOgrenciPanel_Load(object sender, EventArgs e)
         {
@@ -31,9 +31,26 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             txtBolum.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrBolum).FirstOrDefault().ToString();
 
             // Numarası girilen öğrencinin ıd bilgisini kendim aldım
-            txtOgrId=db.TblOgrenci.Where(x=> x.OgrNumara==numara).Select(y=>y.OgrID).FirstOrDefault().ToString();
+            txtOgrId=db.TblOgrenci.Where(x=> x.OgrNumara==numara).Select(y=>y.OgrID).FirstOrDefault();
             // Ama burada data gride yazdıramadım.
-            dataGridView1.DataSource = db.TblNotlar.Where(x => x.Ogrenci == int.Parse(txtOgrId)).ToList();
+            // dataGridView1.DataSource = db.TblNotlar.Where(x => x.Ogrenci == txtOgrId).ToList();
+            // Yazdırdım ama tüm veriyi çekiyormuşuz böyle :D
+
+            // Hocanın yaptığı
+            var sinavnotları = (from x in db.TblNotlar
+                                select new
+                                {
+                                    x.TblDersler.DersAd,
+                                    x.Sinav1,
+                                    x.Sinav2,
+                                    x.Sinav3,
+                                    x.Quiz1,
+                                    x.Quiz2,
+                                    x.Proje,
+                                    x.Ortalama,
+                                    x.Ogrenci
+                                }).Where(y => y.Ogrenci == txtOgrId).ToList();
+            dataGridView1.DataSource = sinavnotları;
         }
     }
 }

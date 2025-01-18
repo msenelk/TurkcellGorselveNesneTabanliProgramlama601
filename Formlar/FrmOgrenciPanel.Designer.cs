@@ -43,7 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtOgrSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.txtNumara = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBolum = new System.Windows.Forms.TextBox();
@@ -80,7 +80,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtOgrSifre);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnKaydet);
+            this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Location = new System.Drawing.Point(764, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(338, 354);
@@ -217,16 +217,16 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Şifre:";
             // 
-            // btnKaydet
+            // btnGuncelle
             // 
-            this.btnKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(78, 262);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(193, 38);
-            this.btnKaydet.TabIndex = 9;
-            this.btnKaydet.Text = "Güncelle";
-            this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(78, 262);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(193, 38);
+            this.btnGuncelle.TabIndex = 9;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             // 
             // txtNumara
             // 
@@ -260,6 +260,7 @@
             // 
             // FrmOgrenciPanel
             // 
+            this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -298,7 +299,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtOgrSifre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.TextBox txtBolum;
     }
 }
