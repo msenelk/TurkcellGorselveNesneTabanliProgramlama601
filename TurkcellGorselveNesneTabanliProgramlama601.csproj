@@ -124,6 +124,12 @@
     <Compile Include="Formlar\FrmGiris.Designer.cs">
       <DependentUpon>FrmGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmHarita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmHarita.Designer.cs">
+      <DependentUpon>FrmHarita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmHarita.resx">
+      <DependentUpon>FrmHarita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmNotlar.resx">
       <DependentUpon>FrmNotlar.cs</DependentUpon>

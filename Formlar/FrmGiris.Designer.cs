@@ -54,6 +54,7 @@
             this.txtNumara.Size = new System.Drawing.Size(193, 26);
             this.txtNumara.TabIndex = 4;
             this.txtNumara.ValidatingType = typeof(int);
+            this.txtNumara.TextChanged += new System.EventHandler(this.txtNumara_TextChanged);
             // 
             // label1
             // 
@@ -76,6 +77,7 @@
             this.txtSifre.Size = new System.Drawing.Size(193, 26);
             this.txtSifre.TabIndex = 6;
             this.txtSifre.UseSystemPasswordChar = true;
+            this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
             // 
             // label2
             // 

@@ -85,5 +85,25 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             }
 
         }
+
+        private void txtNumara_TextChanged(object sender, EventArgs e)
+        {
+            if(txtNumara.Text=="00000" && txtSifre.Text == "000")
+            {
+                FrmHarita frm = new FrmHarita();
+                frm.Show();
+                this.Hide();
+            }
+        }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSifre.Text=="000" && txtNumara.Text == "00000")
+            {
+                FrmHarita frm = new FrmHarita();
+                frm.Show();
+                this.Hide();
+            }
+        }
     }
 }
