@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurkcellGorselveNesneTabanliProgramlama601.Entity;
 
 namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 {
@@ -18,9 +19,16 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         }
 
         public string numara;
+        OgrenciSinavEntities db = new OgrenciSinavEntities(); 
         private void FrmOgrenciPanel_Load(object sender, EventArgs e)
         {
             txtNumara.Text = numara;
+            txtOgrAd.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrAd).FirstOrDefault();
+            txtOgrSoyad.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrSoyad).FirstOrDefault();
+            txtOgrMail.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrEposta).FirstOrDefault();
+            txtOgrSifre.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrSifre).FirstOrDefault();
+            txtBolum.Text = db.TblOgrenci.Where(x => x.OgrNumara == numara).Select(y => y.OgrBolum).FirstOrDefault().ToString();
+
         }
     }
 }

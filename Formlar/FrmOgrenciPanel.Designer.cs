@@ -36,7 +36,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtOgrSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtOgrResim = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.txtNumara = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtBolum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.txtBolum);
             this.groupBox1.Controls.Add(this.txtNumara);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnResimSec);
@@ -72,7 +73,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtOgrSoyad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtOgrResim);
             this.groupBox1.Controls.Add(this.label6);
@@ -111,6 +111,7 @@
             // txtOgrAd
             // 
             this.txtOgrAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrAd.Enabled = false;
             this.txtOgrAd.ForeColor = System.Drawing.Color.White;
             this.txtOgrAd.Location = new System.Drawing.Point(78, 76);
             this.txtOgrAd.Name = "txtOgrAd";
@@ -130,6 +131,7 @@
             // txtOgrSoyad
             // 
             this.txtOgrSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrSoyad.Enabled = false;
             this.txtOgrSoyad.ForeColor = System.Drawing.Color.White;
             this.txtOgrSoyad.Location = new System.Drawing.Point(78, 106);
             this.txtOgrSoyad.Name = "txtOgrSoyad";
@@ -146,16 +148,6 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Soyadı:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 26);
-            this.comboBox1.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -169,6 +161,7 @@
             // txtOgrResim
             // 
             this.txtOgrResim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrResim.Enabled = false;
             this.txtOgrResim.ForeColor = System.Drawing.Color.White;
             this.txtOgrResim.Location = new System.Drawing.Point(78, 200);
             this.txtOgrResim.Name = "txtOgrResim";
@@ -188,6 +181,7 @@
             // txtOgrMail
             // 
             this.txtOgrMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtOgrMail.Enabled = false;
             this.txtOgrMail.ForeColor = System.Drawing.Color.White;
             this.txtOgrMail.Location = new System.Drawing.Point(78, 170);
             this.txtOgrMail.Name = "txtOgrMail";
@@ -254,6 +248,16 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Numara:";
             // 
+            // txtBolum
+            // 
+            this.txtBolum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtBolum.Enabled = false;
+            this.txtBolum.ForeColor = System.Drawing.Color.White;
+            this.txtBolum.Location = new System.Drawing.Point(78, 230);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.Size = new System.Drawing.Size(193, 24);
+            this.txtBolum.TabIndex = 30;
+            // 
             // FrmOgrenciPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -287,7 +291,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtOgrSoyad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtOgrResim;
         private System.Windows.Forms.Label label6;
@@ -296,5 +299,6 @@
         private System.Windows.Forms.TextBox txtOgrSifre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.TextBox txtBolum;
     }
 }
