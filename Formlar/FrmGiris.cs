@@ -32,8 +32,6 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             randomToplam = randomOlustur1 + randomOlustur2;
         }
 
-
-
         public void btnGirisYap_Click(object sender, EventArgs e)
         {
             baglanti.Open();
@@ -41,6 +39,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             komut.Parameters.AddWithValue("@p1", txtNumara.Text);
             komut.Parameters.AddWithValue("@p2", txtSifre.Text);
             SqlDataReader dr = komut.ExecuteReader();
+
             //if (dr.Read())
             //{
             //    FrmOgrenciPanel frm= new FrmOgrenciPanel();
@@ -58,7 +57,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             //    txtNumara.Focus();
             //}
 
-
+            // Burayı kendim yapmaya çalıştım her şey doğru olunca çalışıyor :D
             if (randomToplam == int.Parse(txtKontrol.Text))
             {
                 if (dr.Read())
