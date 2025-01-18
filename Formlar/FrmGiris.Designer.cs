@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtOgrNumara = new System.Windows.Forms.MaskedTextBox();
+            this.txtNumara = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtOgrAd = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGirisYap = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtOgrNumara
+            // txtNumara
             // 
-            this.txtOgrNumara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtOgrNumara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrNumara.ForeColor = System.Drawing.Color.White;
-            this.txtOgrNumara.Location = new System.Drawing.Point(97, 42);
-            this.txtOgrNumara.Mask = "00000";
-            this.txtOgrNumara.Name = "txtOgrNumara";
-            this.txtOgrNumara.Size = new System.Drawing.Size(193, 26);
-            this.txtOgrNumara.TabIndex = 4;
-            this.txtOgrNumara.ValidatingType = typeof(int);
+            this.txtNumara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtNumara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNumara.ForeColor = System.Drawing.Color.White;
+            this.txtNumara.Location = new System.Drawing.Point(97, 42);
+            this.txtNumara.Mask = "00000";
+            this.txtNumara.Name = "txtNumara";
+            this.txtNumara.Size = new System.Drawing.Size(193, 26);
+            this.txtNumara.TabIndex = 4;
+            this.txtNumara.ValidatingType = typeof(int);
             // 
             // label1
             // 
@@ -62,16 +62,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Numara:";
             // 
-            // txtOgrAd
+            // txtSifre
             // 
-            this.txtOgrAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtOgrAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrAd.ForeColor = System.Drawing.Color.White;
-            this.txtOgrAd.Location = new System.Drawing.Point(97, 72);
-            this.txtOgrAd.Name = "txtOgrAd";
-            this.txtOgrAd.Size = new System.Drawing.Size(193, 26);
-            this.txtOgrAd.TabIndex = 6;
-            this.txtOgrAd.UseSystemPasswordChar = true;
+            this.txtSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.ForeColor = System.Drawing.Color.White;
+            this.txtSifre.Location = new System.Drawing.Point(97, 72);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(193, 26);
+            this.txtSifre.TabIndex = 6;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -84,17 +84,18 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Şifre:";
             // 
-            // btnKaydet
+            // btnGirisYap
             // 
-            this.btnKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(98, 129);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(193, 38);
-            this.btnKaydet.TabIndex = 10;
-            this.btnKaydet.Text = "Giriş Yap";
-            this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.ForeColor = System.Drawing.Color.White;
+            this.btnGirisYap.Location = new System.Drawing.Point(98, 129);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(193, 38);
+            this.btnGirisYap.TabIndex = 10;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.UseVisualStyleBackColor = false;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // checkBox1
             // 
@@ -154,11 +155,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtOgrAd);
+            this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtOgrNumara);
+            this.Controls.Add(this.txtNumara);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -172,11 +173,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox txtOgrNumara;
+        private System.Windows.Forms.MaskedTextBox txtNumara;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtOgrAd;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label3;
