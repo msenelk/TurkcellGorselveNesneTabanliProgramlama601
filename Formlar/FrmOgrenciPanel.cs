@@ -16,5 +16,11 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             InitializeComponent();
         }
+
+        public string numara;
+        private void FrmOgrenciPanel_Load(object sender, EventArgs e)
+        {
+            txtNumara.Text = numara;
+        }
     }
 }
