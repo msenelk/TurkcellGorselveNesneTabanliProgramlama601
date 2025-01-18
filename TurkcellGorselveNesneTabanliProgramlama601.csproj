@@ -118,6 +118,12 @@
     <Compile Include="Formlar\FrmBolumListesi.Designer.cs">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmGiris.Designer.cs">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     <Compile Include="Formlar\FrmOgrenciKayit.Designer.cs">
       <DependentUpon>FrmOgrenciKayit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmOgrenciPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmOgrenciPanel.Designer.cs">
+      <DependentUpon>FrmOgrenciPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formlar\FrmBolumler.resx">
@@ -143,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmBolumListesi.resx">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmGiris.resx">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmNotlar.resx">
       <DependentUpon>FrmNotlar.cs</DependentUpon>
@@ -152,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmOgrenciKayit.resx">
       <DependentUpon>FrmOgrenciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmOgrenciPanel.resx">
+      <DependentUpon>FrmOgrenciPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
