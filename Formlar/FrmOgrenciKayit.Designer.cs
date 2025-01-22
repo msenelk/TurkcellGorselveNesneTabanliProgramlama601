@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnResimSec = new System.Windows.Forms.Button();
             this.txtOgrNumara = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtOgrAd = new System.Windows.Forms.TextBox();
@@ -47,14 +48,15 @@
             this.txtOgrSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnResimSec = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.btnGeri);
             this.groupBox1.Controls.Add(this.btnResimSec);
             this.groupBox1.Controls.Add(this.txtOgrNumara);
             this.groupBox1.Controls.Add(this.label4);
@@ -79,6 +81,18 @@
             this.groupBox1.Size = new System.Drawing.Size(370, 388);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnResimSec
+            // 
+            this.btnResimSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnResimSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnResimSec.Location = new System.Drawing.Point(316, 235);
+            this.btnResimSec.Name = "btnResimSec";
+            this.btnResimSec.Size = new System.Drawing.Size(38, 24);
+            this.btnResimSec.TabIndex = 27;
+            this.btnResimSec.Text = "...";
+            this.btnResimSec.UseVisualStyleBackColor = false;
+            this.btnResimSec.Click += new System.EventHandler(this.btnResimSec_Click);
             // 
             // txtOgrNumara
             // 
@@ -251,27 +265,27 @@
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Location = new System.Drawing.Point(117, 297);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(193, 38);
+            this.btnKaydet.Size = new System.Drawing.Size(112, 38);
             this.btnKaydet.TabIndex = 9;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // btnResimSec
-            // 
-            this.btnResimSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnResimSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnResimSec.Location = new System.Drawing.Point(316, 235);
-            this.btnResimSec.Name = "btnResimSec";
-            this.btnResimSec.Size = new System.Drawing.Size(38, 24);
-            this.btnResimSec.TabIndex = 27;
-            this.btnResimSec.Text = "...";
-            this.btnResimSec.UseVisualStyleBackColor = false;
-            this.btnResimSec.Click += new System.EventHandler(this.btnResimSec_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.Location = new System.Drawing.Point(235, 297);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(75, 38);
+            this.btnGeri.TabIndex = 28;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // FrmOgrenciKayit
             // 
@@ -317,5 +331,6 @@
         private System.Windows.Forms.MaskedTextBox txtOgrNumara;
         private System.Windows.Forms.Button btnResimSec;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnGeri;
     }
 }
