@@ -16,7 +16,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formlar.FrmHarita());
+            Application.Run(new Formlar.FrmGiris());
         }
     }
 }

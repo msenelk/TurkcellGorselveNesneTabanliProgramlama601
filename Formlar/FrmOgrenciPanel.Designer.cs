@@ -44,9 +44,9 @@
             this.txtOgrSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.textYeniSifre = new System.Windows.Forms.TextBox();
+            this.txtYeniSifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textYeniSifreTekrar = new System.Windows.Forms.TextBox();
+            this.txtYeniSifreTekrar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -65,9 +65,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.groupBox1.Controls.Add(this.textYeniSifreTekrar);
+            this.groupBox1.Controls.Add(this.txtYeniSifreTekrar);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textYeniSifre);
+            this.groupBox1.Controls.Add(this.txtYeniSifre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtBolum);
             this.groupBox1.Controls.Add(this.txtNumara);
@@ -230,15 +230,15 @@
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // textYeniSifre
+            // txtYeniSifre
             // 
-            this.textYeniSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textYeniSifre.ForeColor = System.Drawing.Color.White;
-            this.textYeniSifre.Location = new System.Drawing.Point(92, 167);
-            this.textYeniSifre.Name = "textYeniSifre";
-            this.textYeniSifre.Size = new System.Drawing.Size(193, 24);
-            this.textYeniSifre.TabIndex = 31;
-            this.textYeniSifre.UseSystemPasswordChar = true;
+            this.txtYeniSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtYeniSifre.ForeColor = System.Drawing.Color.White;
+            this.txtYeniSifre.Location = new System.Drawing.Point(92, 167);
+            this.txtYeniSifre.Name = "txtYeniSifre";
+            this.txtYeniSifre.Size = new System.Drawing.Size(193, 24);
+            this.txtYeniSifre.TabIndex = 31;
+            this.txtYeniSifre.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -250,14 +250,14 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Yeni Şifre:";
             // 
-            // textYeniSifreTekrar
+            // txtYeniSifreTekrar
             // 
-            this.textYeniSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.textYeniSifreTekrar.ForeColor = System.Drawing.Color.White;
-            this.textYeniSifreTekrar.Location = new System.Drawing.Point(92, 197);
-            this.textYeniSifreTekrar.Name = "textYeniSifreTekrar";
-            this.textYeniSifreTekrar.Size = new System.Drawing.Size(193, 24);
-            this.textYeniSifreTekrar.TabIndex = 33;
+            this.txtYeniSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtYeniSifreTekrar.ForeColor = System.Drawing.Color.White;
+            this.txtYeniSifreTekrar.Location = new System.Drawing.Point(92, 197);
+            this.txtYeniSifreTekrar.Name = "txtYeniSifreTekrar";
+            this.txtYeniSifreTekrar.Size = new System.Drawing.Size(193, 24);
+            this.txtYeniSifreTekrar.TabIndex = 33;
             // 
             // label6
             // 
@@ -309,9 +309,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.TextBox txtBolum;
-        private System.Windows.Forms.TextBox textYeniSifreTekrar;
+        private System.Windows.Forms.TextBox txtYeniSifreTekrar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textYeniSifre;
+        private System.Windows.Forms.TextBox txtYeniSifre;
         private System.Windows.Forms.Label label1;
     }
 }

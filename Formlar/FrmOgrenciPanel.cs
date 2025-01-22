@@ -55,7 +55,24 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            if(txtYeniSifre.Text == txtYeniSifreTekrar.Text)
+            {
+                var deger = db.TblOgrenci.Find(txtOgrId);
+                deger.OgrSifre = txtYeniSifre.Text;
+                db.SaveChanges();
+                MessageBox.Show("Şifre Değiştirme İşlemi Başarılı Bir Şekilde Gerçekleşti");
+                txtYeniSifre.Clear();
+                txtYeniSifreTekrar.Clear();
 
+            }
+            else
+            {
+                MessageBox.Show("Girdiğiniz Yeni Şifreler Birbirleriyle Uyuşmuyor.");
+                txtYeniSifre.Clear();
+                txtYeniSifreTekrar.Clear();
+                txtYeniSifre.Focus();
+            }
+            
         }
     }
 }
