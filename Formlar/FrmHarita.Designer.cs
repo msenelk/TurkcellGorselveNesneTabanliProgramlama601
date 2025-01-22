@@ -212,6 +212,7 @@
             this.pnglYardim.Name = "pnglYardim";
             this.pnglYardim.Size = new System.Drawing.Size(200, 100);
             this.pnglYardim.TabIndex = 5;
+            this.pnglYardim.Click += new System.EventHandler(this.pnglYardim_Click);
             // 
             // label8
             // 
