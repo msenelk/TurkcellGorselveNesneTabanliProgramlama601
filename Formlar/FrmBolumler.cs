@@ -27,5 +27,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                 txtBolumAdi.Clear();
             }
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Gizle.
+        }
     }
 }
