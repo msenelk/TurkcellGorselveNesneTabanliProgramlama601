@@ -16,5 +16,23 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             InitializeComponent();
         }
+
+        private void PnlBolumListesi_Click(object sender, EventArgs e)
+        {
+            FrmBolumListesi frm = new FrmBolumListesi();
+            frm.Show();
+        }
+
+        private void PnlYeniBolum_Click(object sender, EventArgs e)
+        {
+            FrmBolumler frm = new FrmBolumler();
+            frm.Show();
+        }
+
+        private void PnlNotlar_Click(object sender, EventArgs e)
+        {
+            FrmNotlar frm = new FrmNotlar();
+            frm.Show();
+        }
     }
 }
