@@ -33,6 +33,29 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         private void Listele() // Listeleme için bir metot oluşturdum ki her defasında kod yazmaktansa bir kod üzerinden çağırayım.
         {
             dataGridView1.DataSource = db.Notlar3();
+            SutunOzellestirme();
+
+        }
+
+        private void SutunOzellestirme()
+        {
+            dataGridView1.Columns[0].HeaderText = "Öğrenci ID";
+            dataGridView1.Columns[1].HeaderText = "Ders";
+            dataGridView1.Columns[2].HeaderText = "Öğrenci Ad ve Soyad";
+            dataGridView1.Columns[3].HeaderText = "Sınav 1";
+            dataGridView1.Columns[4].HeaderText = "Sınav 2";
+            dataGridView1.Columns[5].HeaderText = "Sınav 3";
+            dataGridView1.Columns[6].HeaderText = "Quiz 1";
+            dataGridView1.Columns[7].HeaderText = "Quiz 2";
+            dataGridView1.Columns[8].HeaderText = "Proje";
+            dataGridView1.Columns[9].HeaderText = "Ortalama";
+            dataGridView1.Columns[2].Width = 90;
+            dataGridView1.Columns[3].Width = 90;
+            dataGridView1.Columns[4].Width = 90;
+            dataGridView1.Columns[5].Width = 90;
+            dataGridView1.Columns[6].Width = 80;
+            dataGridView1.Columns[7].Width = 90;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Tüm sütun başlıklarını ortalıyor.
         }
         private void btnEkle_Click(object sender, EventArgs e)
         {
@@ -99,6 +122,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             int d = int.Parse(comboBox1.SelectedValue.ToString());
             dataGridView1.DataSource = degerler.Where(y => y.Ders ==d).ToList();
             dataGridView1.Columns["Ders"].Visible = false; // İlgili sütunu göstermiyoruz tabii bunu listelemeden sonra yapıyoruz.
+            SutunOzellestirme();
         }
 
         private void btnAra_Click(object sender, EventArgs e)
