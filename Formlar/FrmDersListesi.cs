@@ -27,7 +27,14 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                   x.DersAd
                               };
             dataGridView1.DataSource = derslistesi.ToList();
+            dataGridView1.Columns[0].HeaderText = "Ders ID";
+            dataGridView1.Columns[1].HeaderText = "Ders Adı";
+            dataGridView1.Columns[0].Width = 90;
         }
 
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
