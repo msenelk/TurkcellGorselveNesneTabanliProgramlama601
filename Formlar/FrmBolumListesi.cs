@@ -27,6 +27,14 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                x.BolumAd
                            };
             dataGridView1.DataSource = degerler.ToList();
+            dataGridView1.Columns[0].HeaderText = "Bölüm ID"; // Sütun Adı
+            dataGridView1.Columns[1].HeaderText = "Bölüm Adı";
+            dataGridView1.Columns[0].Width = 100; // Sütun genişliği
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
