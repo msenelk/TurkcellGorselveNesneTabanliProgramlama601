@@ -180,5 +180,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             txtProje.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             txtOrtalama.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

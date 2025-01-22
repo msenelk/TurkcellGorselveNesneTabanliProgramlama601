@@ -56,13 +56,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAra2 = new System.Windows.Forms.Button();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.txtNumaraAra = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtNumaraAra = new System.Windows.Forms.MaskedTextBox();
-            this.btnAra = new System.Windows.Forms.Button();
-            this.btnAra2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,7 +73,7 @@
             // 
             this.btnListele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnListele.ForeColor = System.Drawing.Color.White;
-            this.btnListele.Location = new System.Drawing.Point(187, 410);
+            this.btnListele.Location = new System.Drawing.Point(188, 410);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(93, 43);
             this.btnListele.TabIndex = 27;
@@ -270,6 +271,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.btnGeri);
             this.groupBox1.Controls.Add(this.txtOrtalama);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.btnEkle);
@@ -298,7 +300,7 @@
             this.groupBox1.Controls.Add(this.btnHesapla);
             this.groupBox1.Location = new System.Drawing.Point(913, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 486);
+            this.groupBox1.Size = new System.Drawing.Size(344, 524);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -378,16 +380,50 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
-            // dataGridView1
+            // btnAra2
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.Size = new System.Drawing.Size(895, 403);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.btnAra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnAra2.ForeColor = System.Drawing.Color.White;
+            this.btnAra2.Location = new System.Drawing.Point(718, 23);
+            this.btnAra2.Name = "btnAra2";
+            this.btnAra2.Size = new System.Drawing.Size(70, 24);
+            this.btnAra2.TabIndex = 36;
+            this.btnAra2.Text = "Ara 2";
+            this.btnAra2.UseVisualStyleBackColor = false;
+            this.btnAra2.Click += new System.EventHandler(this.btnAra2_Click);
+            // 
+            // btnAra
+            // 
+            this.btnAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Location = new System.Drawing.Point(642, 23);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(70, 24);
+            this.btnAra.TabIndex = 33;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
+            // 
+            // txtNumaraAra
+            // 
+            this.txtNumaraAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtNumaraAra.ForeColor = System.Drawing.Color.White;
+            this.txtNumaraAra.Location = new System.Drawing.Point(443, 23);
+            this.txtNumaraAra.Mask = "00000";
+            this.txtNumaraAra.Name = "txtNumaraAra";
+            this.txtNumaraAra.Size = new System.Drawing.Size(193, 24);
+            this.txtNumaraAra.TabIndex = 35;
+            this.txtNumaraAra.ValidatingType = typeof(int);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(314, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(132, 18);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Öğrenci Numarası:";
             // 
             // comboBox1
             // 
@@ -410,57 +446,35 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "Ders Seçin:";
             // 
-            // label13
+            // dataGridView1
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(314, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(132, 18);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Öğrenci Numarası:";
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.Size = new System.Drawing.Size(895, 445);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtNumaraAra
+            // btnGeri
             // 
-            this.txtNumaraAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtNumaraAra.ForeColor = System.Drawing.Color.White;
-            this.txtNumaraAra.Location = new System.Drawing.Point(443, 23);
-            this.txtNumaraAra.Mask = "00000";
-            this.txtNumaraAra.Name = "txtNumaraAra";
-            this.txtNumaraAra.Size = new System.Drawing.Size(193, 24);
-            this.txtNumaraAra.TabIndex = 35;
-            this.txtNumaraAra.ValidatingType = typeof(int);
-            // 
-            // btnAra
-            // 
-            this.btnAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Location = new System.Drawing.Point(642, 23);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(70, 24);
-            this.btnAra.TabIndex = 33;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = false;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
-            // 
-            // btnAra2
-            // 
-            this.btnAra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnAra2.ForeColor = System.Drawing.Color.White;
-            this.btnAra2.Location = new System.Drawing.Point(718, 23);
-            this.btnAra2.Name = "btnAra2";
-            this.btnAra2.Size = new System.Drawing.Size(70, 24);
-            this.btnAra2.TabIndex = 36;
-            this.btnAra2.Text = "Ara 2";
-            this.btnAra2.UseVisualStyleBackColor = false;
-            this.btnAra2.Click += new System.EventHandler(this.btnAra2_Click);
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.Location = new System.Drawing.Point(88, 459);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(193, 43);
+            this.btnGeri.TabIndex = 33;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // FrmNotlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(1269, 502);
+            this.ClientSize = new System.Drawing.Size(1269, 544);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -518,5 +532,6 @@
         private System.Windows.Forms.MaskedTextBox txtNumaraAra;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnAra2;
+        private System.Windows.Forms.Button btnGeri;
     }
 }
