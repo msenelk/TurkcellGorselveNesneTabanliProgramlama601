@@ -52,5 +52,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                 }).Where(y => y.Ogrenci == txtOgrId).ToList();
             dataGridView1.DataSource = sinavnotları;
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
