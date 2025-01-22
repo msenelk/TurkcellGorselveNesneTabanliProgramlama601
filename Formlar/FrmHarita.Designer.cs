@@ -234,6 +234,7 @@
             this.PnglCikis.Name = "PnglCikis";
             this.PnglCikis.Size = new System.Drawing.Size(200, 100);
             this.PnglCikis.TabIndex = 6;
+            this.PnglCikis.Click += new System.EventHandler(this.PnglCikis_Click);
             // 
             // label9
             // 

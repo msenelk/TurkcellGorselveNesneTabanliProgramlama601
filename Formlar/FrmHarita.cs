@@ -63,5 +63,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             FrmYeniDers frm = new FrmYeniDers();
             frm.Show();
         }
+
+        private void PnglCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
