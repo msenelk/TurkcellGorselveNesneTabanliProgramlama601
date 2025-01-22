@@ -160,6 +160,12 @@
     <Compile Include="Formlar\FrmOgrenciPanel.Designer.cs">
       <DependentUpon>FrmOgrenciPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmYeniDers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmYeniDers.Designer.cs">
+      <DependentUpon>FrmYeniDers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formlar\FrmBolumler.resx">
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmOgrenciPanel.resx">
       <DependentUpon>FrmOgrenciPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmYeniDers.resx">
+      <DependentUpon>FrmYeniDers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

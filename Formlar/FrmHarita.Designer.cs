@@ -192,6 +192,7 @@
             this.pnlYeniDers.Name = "pnlYeniDers";
             this.pnlYeniDers.Size = new System.Drawing.Size(200, 100);
             this.pnlYeniDers.TabIndex = 4;
+            this.pnlYeniDers.Click += new System.EventHandler(this.pnlYeniDers_Click);
             // 
             // label7
             // 

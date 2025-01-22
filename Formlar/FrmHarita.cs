@@ -57,5 +57,11 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         {
             MessageBox.Show("Bu proje Turkcell Geleceği Yazanlar Eğitimi Kapsamında Hazırlanmıştır. Müfredatın son projesinde amacımız şu ana kadar öğrenmiş olduğumuz konuların bütük bir kısmını içeren örnek bir ver itabanlı proje uygulaması geliştirmektir. Projemizde akademisyen için kullanıcı adı: 0000 olup şifre: 000 şeklindedir. Akademisyen panelinden öğrenci, ders, bölüm, sınav notları gibi işlemlerin tamamı gerçekleştirilebilir. Sisteme giriş yapan öğrenci sadece kendisine ait bilgileri ve sınav notlarını görüntüler.","Yardım Penceresi",MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        private void pnlYeniDers_Click(object sender, EventArgs e)
+        {
+            FrmYeniDers frm = new FrmYeniDers();
+            frm.Show();
+        }
     }
 }
