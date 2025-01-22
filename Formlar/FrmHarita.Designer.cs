@@ -171,6 +171,7 @@
             this.pnlDersListesi.Name = "pnlDersListesi";
             this.pnlDersListesi.Size = new System.Drawing.Size(200, 100);
             this.pnlDersListesi.TabIndex = 5;
+            this.pnlDersListesi.Click += new System.EventHandler(this.pnlDersListesi_Click);
             // 
             // label6
             // 

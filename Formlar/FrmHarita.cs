@@ -47,6 +47,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             frm.Show();
         }
 
-
+        private void pnlDersListesi_Click(object sender, EventArgs e)
+        {
+            FrmDersListesi frm = new FrmDersListesi();
+            frm.Show();
+        }
     }
 }

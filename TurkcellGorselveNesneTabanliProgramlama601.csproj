@@ -118,6 +118,12 @@
     <Compile Include="Formlar\FrmBolumListesi.Designer.cs">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmDersListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmDersListesi.Designer.cs">
+      <DependentUpon>FrmDersListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmBolumListesi.resx">
       <DependentUpon>FrmBolumListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmDersListesi.resx">
+      <DependentUpon>FrmDersListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
