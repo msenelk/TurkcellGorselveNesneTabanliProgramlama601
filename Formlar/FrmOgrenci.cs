@@ -34,7 +34,6 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             cmbBolum.ValueMember = "BolumID";
             cmbBolum.DisplayMember = "BolumAd";
             cmbBolum.DataSource = ds;
-            // Bölümleri getiriyoruz.
         }
         void listele()
         {
@@ -119,6 +118,7 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Hide();
+
         }
     }
 }

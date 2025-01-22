@@ -82,8 +82,9 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                 MessageBox.Show("Doğrulama İşlemini Yanlış Yaptınız Lütfen Tekrar Deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtKontrol.Clear();
                 txtKontrol.Focus();
+                baglanti.Close();
             }
-
+            baglanti.Close();
         }
 
         private void txtNumara_TextChanged(object sender, EventArgs e)

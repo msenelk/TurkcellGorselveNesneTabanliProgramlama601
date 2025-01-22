@@ -48,9 +48,18 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
                                     x.Quiz2,
                                     x.Proje,
                                     x.Ortalama,
-                                    x.Ogrenci
+                                    x.Ogrenci,
+                                    x.TblOgrenci.OgrAd
                                 }).Where(y => y.Ogrenci == txtOgrId).ToList();
             dataGridView1.DataSource = sinavnotları;
+            dataGridView1.Columns[0].HeaderText = "Ders Adı";
+            dataGridView1.Columns[1].HeaderText = "Sınav 1";
+            dataGridView1.Columns[2].HeaderText = "Sınav 2";
+            dataGridView1.Columns[3].HeaderText = "Sınav 3";
+            dataGridView1.Columns[4].HeaderText = "Quiz 1";
+            dataGridView1.Columns[5].HeaderText = "Quiz 2";
+            dataGridView1.Columns[9].HeaderText = "Öğrenci Adı";
+            dataGridView1.Columns["Ogrenci"].Visible = false;
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -77,7 +86,19 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult result = MessageBox.Show("Geri çıkmak istediğinizden emin misiniz?", "Bilgi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                FrmGiris frm = new FrmGiris();
+                frm.Show();
+                this.Hide();
+
+            }
+            
         }
     }
 }
