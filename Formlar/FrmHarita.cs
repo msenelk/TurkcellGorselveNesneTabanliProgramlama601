@@ -34,5 +34,19 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             FrmNotlar frm = new FrmNotlar();
             frm.Show();
         }
+
+        private void PnlOgrenciFormu_Click(object sender, EventArgs e)
+        {
+            FrmOgrenci frm = new FrmOgrenci();
+            frm.Show();
+        }
+
+        private void pnlOgrenciKayit_Click(object sender, EventArgs e)
+        {
+            FrmOgrenciKayit frm = new FrmOgrenciKayit();
+            frm.Show();
+        }
+
+
     }
 }
