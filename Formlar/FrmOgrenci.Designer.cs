@@ -52,6 +52,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.btnGeri);
             this.groupBox1.Controls.Add(this.btnListele);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btnGuncelle);
@@ -90,9 +92,9 @@
             // 
             this.btnListele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnListele.ForeColor = System.Drawing.Color.White;
-            this.btnListele.Location = new System.Drawing.Point(121, 397);
+            this.btnListele.Location = new System.Drawing.Point(87, 348);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(134, 43);
+            this.btnListele.Size = new System.Drawing.Size(92, 43);
             this.btnListele.TabIndex = 27;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = false;
@@ -114,9 +116,9 @@
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(121, 348);
+            this.btnGuncelle.Location = new System.Drawing.Point(190, 299);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(134, 43);
+            this.btnGuncelle.Size = new System.Drawing.Size(90, 43);
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
@@ -294,9 +296,9 @@
             // 
             this.btnSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(121, 299);
+            this.btnSil.Location = new System.Drawing.Point(87, 299);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(134, 43);
+            this.btnSil.Size = new System.Drawing.Size(92, 43);
             this.btnSil.TabIndex = 9;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
@@ -315,6 +317,18 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.Location = new System.Drawing.Point(190, 348);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(90, 43);
+            this.btnGeri.TabIndex = 28;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // FrmOgrenci
             // 
@@ -364,5 +378,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnGeri;
     }
 }
