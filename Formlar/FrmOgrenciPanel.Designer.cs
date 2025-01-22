@@ -30,6 +30,10 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtYeniSifreTekrar = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtYeniSifre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtBolum = new System.Windows.Forms.TextBox();
             this.txtNumara = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -44,10 +48,7 @@
             this.txtOgrSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.txtYeniSifre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtYeniSifreTekrar = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtYeniSifreTekrar);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtYeniSifre);
@@ -88,6 +90,45 @@
             this.groupBox1.Size = new System.Drawing.Size(303, 354);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // txtYeniSifreTekrar
+            // 
+            this.txtYeniSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtYeniSifreTekrar.ForeColor = System.Drawing.Color.White;
+            this.txtYeniSifreTekrar.Location = new System.Drawing.Point(92, 197);
+            this.txtYeniSifreTekrar.Name = "txtYeniSifreTekrar";
+            this.txtYeniSifreTekrar.Size = new System.Drawing.Size(193, 24);
+            this.txtYeniSifreTekrar.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(14, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 18);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Yeni Şifre:";
+            // 
+            // txtYeniSifre
+            // 
+            this.txtYeniSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtYeniSifre.ForeColor = System.Drawing.Color.White;
+            this.txtYeniSifre.Location = new System.Drawing.Point(92, 167);
+            this.txtYeniSifre.Name = "txtYeniSifre";
+            this.txtYeniSifre.Size = new System.Drawing.Size(193, 24);
+            this.txtYeniSifre.TabIndex = 31;
+            this.txtYeniSifre.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(14, 173);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 18);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Yeni Şifre:";
             // 
             // txtBolum
             // 
@@ -123,7 +164,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(108, 20);
+            this.label4.Location = new System.Drawing.Point(100, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(187, 18);
             this.label4.TabIndex = 24;
@@ -224,50 +265,23 @@
             this.btnGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnGuncelle.Location = new System.Drawing.Point(92, 294);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(193, 38);
+            this.btnGuncelle.Size = new System.Drawing.Size(101, 38);
             this.btnGuncelle.TabIndex = 9;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // txtYeniSifre
+            // button1
             // 
-            this.txtYeniSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtYeniSifre.ForeColor = System.Drawing.Color.White;
-            this.txtYeniSifre.Location = new System.Drawing.Point(92, 167);
-            this.txtYeniSifre.Name = "txtYeniSifre";
-            this.txtYeniSifre.Size = new System.Drawing.Size(193, 24);
-            this.txtYeniSifre.TabIndex = 31;
-            this.txtYeniSifre.UseSystemPasswordChar = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Yeni Şifre:";
-            // 
-            // txtYeniSifreTekrar
-            // 
-            this.txtYeniSifreTekrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtYeniSifreTekrar.ForeColor = System.Drawing.Color.White;
-            this.txtYeniSifreTekrar.Location = new System.Drawing.Point(92, 197);
-            this.txtYeniSifreTekrar.Name = "txtYeniSifreTekrar";
-            this.txtYeniSifreTekrar.Size = new System.Drawing.Size(193, 24);
-            this.txtYeniSifreTekrar.TabIndex = 33;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 203);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 18);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Yeni Şifre:";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(199, 294);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 38);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Geri";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmOgrenciPanel
             // 
@@ -313,5 +327,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtYeniSifre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

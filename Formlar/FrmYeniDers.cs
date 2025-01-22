@@ -26,5 +26,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             db.SaveChanges();
             MessageBox.Show("Yeni ders kaydetme işlemi başarılı bir şekilde gerçekleşti.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

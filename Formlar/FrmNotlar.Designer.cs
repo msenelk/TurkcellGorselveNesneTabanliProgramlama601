@@ -49,6 +49,7 @@
             this.txtQuiz1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.txtOrtalama = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnGeri = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -304,6 +304,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // btnGeri
+            // 
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
+            this.btnGeri.ForeColor = System.Drawing.Color.White;
+            this.btnGeri.Location = new System.Drawing.Point(88, 459);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(193, 43);
+            this.btnGeri.TabIndex = 33;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
+            // 
             // txtOrtalama
             // 
             this.txtOrtalama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -384,9 +396,9 @@
             // 
             this.btnAra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnAra2.ForeColor = System.Drawing.Color.White;
-            this.btnAra2.Location = new System.Drawing.Point(718, 23);
+            this.btnAra2.Location = new System.Drawing.Point(729, 20);
             this.btnAra2.Name = "btnAra2";
-            this.btnAra2.Size = new System.Drawing.Size(70, 24);
+            this.btnAra2.Size = new System.Drawing.Size(81, 33);
             this.btnAra2.TabIndex = 36;
             this.btnAra2.Text = "Ara 2";
             this.btnAra2.UseVisualStyleBackColor = false;
@@ -396,9 +408,9 @@
             // 
             this.btnAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
             this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Location = new System.Drawing.Point(642, 23);
+            this.btnAra.Location = new System.Drawing.Point(642, 20);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(70, 24);
+            this.btnAra.Size = new System.Drawing.Size(81, 33);
             this.btnAra.TabIndex = 33;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = false;
@@ -456,18 +468,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(895, 445);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // btnGeri
-            // 
-            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(140)))));
-            this.btnGeri.ForeColor = System.Drawing.Color.White;
-            this.btnGeri.Location = new System.Drawing.Point(88, 459);
-            this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(193, 43);
-            this.btnGeri.TabIndex = 33;
-            this.btnGeri.Text = "Geri";
-            this.btnGeri.UseVisualStyleBackColor = false;
-            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // FrmNotlar
             // 

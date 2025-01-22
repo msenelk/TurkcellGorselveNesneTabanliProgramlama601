@@ -74,5 +74,10 @@ namespace TurkcellGorselveNesneTabanliProgramlama601.Formlar
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
